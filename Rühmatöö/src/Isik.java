@@ -7,8 +7,8 @@ public abstract class Isik {
     private double kehakaal;
     private int aktiivsus;
     ArrayList<String> tegevused= new ArrayList<>();
-    String[] algtegevused = {"Kõnni toas tasa ringi,2","Pühi põrandaid,3.3","Tee kergeid venitusi,2.3","Tantsi,7.8","Tee süüa,2.5", "Korrasta voodi ja vaheta linad,3.3", "Sörgi kohapeal,7.0","",
-    "Tee kääri hüppeid,8"};
+    String[] algtegevused = {"Kõnni toas tasa ringi,2","Pühi põrandaid,3.3","Tee kergeid venitusi,2.3","Tantsi,7.8","Tee süüa,2.5", "Korrasta voodi ja vaheta linad,3.3", "Sörgi kohapeal,7.0","Tee intensiivselt kätekõverdusi,8",
+    "Tee kääri hüppeid,8","Tee intensiivselt kõhulihaseid,8","Tee mõõdukalt kätekõverdusi,3.8"};
 
     public Isik(String nimi, int vanus, double pikkus, double kehakaal, int aktiivsus) {
         this.nimi = nimi;
@@ -16,7 +16,10 @@ public abstract class Isik {
         this.pikkus = pikkus;
         this.kehakaal = kehakaal;
         this.aktiivsus = aktiivsus;
-
+        //Lisame algtegevused listi
+        for (int i = 0; i <algtegevused.length ; i++) {
+            tegevused.add(algtegevused[i]);
+        }
 
     }
 
@@ -60,6 +63,11 @@ public abstract class Isik {
         this.aktiivsus = aktiivsus;
     }
 
+    public String tegevuseSuvalineSoovitus(){
+        int listiSuurus = tegevused.size();
+        String tegevus = tegevused.get((int)Math.random()*listiSuurus);
+        return tegevus;
+    }
 
 
     public double kehamassiindeks(){
