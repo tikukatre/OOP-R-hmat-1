@@ -7,7 +7,7 @@ public abstract class Isik {
     private double kehakaal;
     private int aktiivsus;
     ArrayList<String> tegevused= new ArrayList<>();
-    String[] algtegevused = {"Kõnni toas tasa ringi,2","Pühi põrandaid,3.3","Tee kergeid venitusi,2.3","Tantsi,7.8","Tee süüa,2.5", "Korrasta voodi ja vaheta linad,3.3", "Sörgi kohapeal,7.0",
+    String[] algtegevused = {"Kõnni toas tasa ringi,2","Pühi põrandaid,3.3","Tee kergeid venitusi,2.3","Tantsi,7.8","Tee süüa,2.5", "Korrasta voodi ja vaheta linad,3.3", "Sörgi kohapeal,7.0","",
     "Tee kääri hüppeid,8"};
 
     public Isik(String nimi, int vanus, double pikkus, double kehakaal, int aktiivsus) {
