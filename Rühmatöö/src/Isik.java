@@ -71,7 +71,22 @@ public abstract class Isik {
 
 
     public double kehamassiindeks(){
-        return this.kehakaal/(this.pikkus*this.pikkus);
+        return Math.round((this.kehakaal/(this.pikkus*this.pikkus))*100)/100;
+    }
+    public void soovitus(){
+        double BMI = kehamassiindeks();
+        if ( BMI < 18.6){
+            System.out.println("Tarbi rohkem toitu, oled alakaalus.");
+        }
+        if ( BMI > 25){
+            System.out.println("Pead natuke rohkem liigutama, oled natuke ülekaalus");
+        }
+        if (BMI > 30){
+            System.out.println("Tee trenni või tarbi vähem toitu, sest oled üsna ülekaalus.");
+        }
+        if( BMI > 18.5 & BMI <= 25 ){
+            System.out.println("Oled normaalkaalus.");
+        }
     }
 
     public double kaloritekulu(){

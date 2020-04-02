@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="">
+    <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="Kalortiekulu arvutamine">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Naine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Naine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Isik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Isik.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,13 +111,7 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1585826928750</updated>
     </task>
-    <task id="LOCAL−00005" summary="toString">
-      <created>1585832550913</created>
-      <option name="number" value="LOCAL−00005" />
-      <option name="presentableId" value="LOCAL−00005" />
-      <updated>1585832550913</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,24 +121,26 @@
     <MESSAGE value="Esimesed väljad" />
     <MESSAGE value="Lisasin tegevusi" />
     <MESSAGE value="Paar väikest muutust" />
-    <MESSAGE value="toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="toString" />
+    <option name="LAST_COMMIT_MESSAGE" value="Paar väikest muutust" />
   </component>
   <component name="WindowStateProjectService">
     <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585771597310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585771597310" />
-    <state x="830" y="99" key="#com.intellij.ide.util.MemberChooser" timestamp="1585833506616">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1585594693016">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="830" y="99" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1585833506616" />
     <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585594693016" />
-    <state x="525" y="0" key="CommitChangelistDialog2" timestamp="1585833526135">
+    <state x="525" y="0" key="CommitChangelistDialog2" timestamp="1585832549548">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="525" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585833526135" />
+    <state x="525" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585832549548" />
     <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585823453874" />
+    <state x="368" y="92" key="DiffContextDialog" timestamp="1585833792206">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="368" y="92" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585833792206" />
     <state x="1082" y="262" key="FileChooserDialogImpl" timestamp="1585821952506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -182,11 +177,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="916" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585830329357" />
-    <state x="787" y="186" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585828992071">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="1148" y="232" key="RollbackChangesDialog" timestamp="1585833793899">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1148" y="232" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585833793899" />
+    <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585833715853">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="787" y="186" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1585828992071" />
-    <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585823310095" />
+    <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585833715853" />
     <state x="685" y="141" key="new project wizard" timestamp="1585619393239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
