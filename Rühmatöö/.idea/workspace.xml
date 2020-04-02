@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Mees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Naine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Naine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Isik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Isik.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Peaklass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Peaklass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Toit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Toit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Isik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Isik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Peaklass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Peaklass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Toit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Toit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +59,7 @@
     <configuration name="Peaklass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Peaklass" />
       <module name="Rühmatöö" />
+      <option name="PROGRAM_PARAMETERS" value="naine Mari 23 1.67 57.3 2 küpsis 60 441" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,7 +117,14 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1585826928750</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Kalortiekulu arvutamine">
+      <created>1585830368109</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585830368109</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,42 +134,43 @@
     <MESSAGE value="Esimesed väljad" />
     <MESSAGE value="Lisasin tegevusi" />
     <MESSAGE value="Paar väikest muutust" />
-    <option name="LAST_COMMIT_MESSAGE" value="Paar väikest muutust" />
+    <MESSAGE value="Kalortiekulu arvutamine" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kalortiekulu arvutamine" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585771597310">
+    <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585830633872">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585771597310" />
+    <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585830633872" />
     <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1585594693016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585594693016" />
-    <state x="525" y="0" key="CommitChangelistDialog2" timestamp="1585829053556">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="1011" y="115" key="CommitChangelistDialog2" timestamp="1585830367558">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="525" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585829053556" />
-    <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585823453874" />
+    <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585830367558" />
     <state x="1082" y="262" key="FileChooserDialogImpl" timestamp="1585821952506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1082" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585821952506" />
-    <state width="916" height="344" key="GridCell.Tab.0.bottom" timestamp="1585830329357">
+    <state width="916" height="279" key="GridCell.Tab.0.bottom" timestamp="1585832127850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585830329357" />
-    <state width="916" height="344" key="GridCell.Tab.0.center" timestamp="1585830329357">
+    <state width="916" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585832127850" />
+    <state width="916" height="279" key="GridCell.Tab.0.center" timestamp="1585832127850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="344" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585830329357" />
-    <state width="916" height="344" key="GridCell.Tab.0.left" timestamp="1585830329356">
+    <state width="916" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585832127850" />
+    <state width="916" height="279" key="GridCell.Tab.0.left" timestamp="1585832127850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="344" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585830329356" />
-    <state width="916" height="344" key="GridCell.Tab.0.right" timestamp="1585830329357">
+    <state width="916" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585832127850" />
+    <state width="916" height="279" key="GridCell.Tab.0.right" timestamp="1585832127850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="344" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585830329357" />
+    <state width="916" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585832127850" />
     <state width="916" height="344" key="GridCell.Tab.1.bottom" timestamp="1585830329357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -173,11 +187,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="916" height="344" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585830329357" />
-    <state x="787" y="186" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585828992071">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585832392553">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="787" y="186" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1585828992071" />
-    <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585823310095" />
+    <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585832392553" />
     <state x="685" y="141" key="new project wizard" timestamp="1585619393239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

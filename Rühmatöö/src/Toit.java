@@ -32,7 +32,7 @@ public class Toit {
     public void setKalorid(int kalorid) {
         this.kalorid = kalorid;
     }
-    public double kaloreid(int kalorid, double kogus){
+    public double kaloreid(){
         return (double)this.kalorid*(this.kogus/100);   // arvutab kui palju kaloreid oli selles koguses toidus, mis inimene sõi
     }
 }

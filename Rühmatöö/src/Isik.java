@@ -74,9 +74,6 @@ public abstract class Isik {
         return this.kehakaal/(this.pikkus*this.pikkus);
     }
 
-    abstract double BMR();
-    //Põhiline ainevahetuse kiirus/ Basal Metabolic Rate https://www.verywellfit.com/what-is-bmr-or-basal-metabolic-rate-3495380;
-
     public double kaloritekulu(){
         //Kaloritekulu arvutamine soovitatud tegevuse kohta
         int suvalisedMinutid = (int)(Math.random()*61); //Genereerib suvaliselt minutite arvu 0-st kuni 1 tunnini, kui palju tegevust võiks teha.
@@ -86,6 +83,9 @@ public abstract class Isik {
         return Math.round(kaloritekulu*100)/100;
     }
 
+
+    abstract double BMR();
+    //Põhiline ainevahetuse kiirus/ Basal Metabolic Rate https://www.verywellfit.com/what-is-bmr-or-basal-metabolic-rate-3495380;
 
     abstract double vajaminevadKalorid();
     //Inimesele vajaminevate kalorite arvutamine, tema akttivuse ja BMRiga seoses
