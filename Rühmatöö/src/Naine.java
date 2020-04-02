@@ -11,6 +11,9 @@ public class Naine extends Isik {
     }
     @Override
     double kaloritekulu() {
-        return 0;
+        int suvalisedMinutid = (int)Math.random()*61;
+        String[] tegevus = super.tegevuseSuvalineSoovitus().split(",");
+        Double kaloritekulu = suvalisedMinutid* (Integer.parseInt(tegevus[1])*super.getKehakaal());
+        return kaloritekulu;
     }
 }
