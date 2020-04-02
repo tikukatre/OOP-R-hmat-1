@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Isik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Isik.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Mees.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Mees.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Naine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Naine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Toit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Toit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Isik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Isik.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Naine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Naine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Peaklass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Peaklass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Toit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Toit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585835139331</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Ümaradmised ja peameetodisse lisad">
+      <created>1585836589012</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585836589013</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +154,8 @@
     <MESSAGE value="Kalortiekulu arvutamine" />
     <MESSAGE value="Soovitus kehamassiindeksi järgi" />
     <MESSAGE value="Peameetodi muudatus" />
-    <option name="LAST_COMMIT_MESSAGE" value="Peameetodi muudatus" />
+    <MESSAGE value="Ümaradmised ja peameetodisse lisad" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ümaradmised ja peameetodisse lisad" />
   </component>
   <component name="WindowStateProjectService">
     <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585771597310">
@@ -167,11 +166,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585594693016" />
-    <state x="1011" y="115" key="CommitChangelistDialog2" timestamp="1585835138793">
+    <state x="1011" y="115" key="CommitChangelistDialog2" timestamp="1585836588452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="525" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585832549548" />
-    <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585835138793" />
+    <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585836588452" />
     <state x="368" y="92" key="DiffContextDialog" timestamp="1585833792206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
