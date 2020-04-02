@@ -16,4 +16,10 @@ public class Mees extends Isik {
     double vajaminevadKalorid() {
         return BMR() * super.getAktiivsus();
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+        return "Vajaminevad kalorid: " + vajaminevadKalorid();
+    }
 }

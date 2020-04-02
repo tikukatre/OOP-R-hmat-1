@@ -89,4 +89,9 @@ public abstract class Isik {
 
     abstract double vajaminevadKalorid();
     //Inimesele vajaminevate kalorite arvutamine, tema akttivuse ja BMRiga seoses
+
+    @Override
+    public String toString() {
+        return "Nimi= " + nimi;
+    }
 }

@@ -35,4 +35,9 @@ public class Toit {
     public double kaloreid(){
         return (double)this.kalorid*(this.kogus/100);   // arvutab kui palju kaloreid oli selles koguses toidus, mis inimene sõi
     }
+
+    @Override
+    public String toString() {
+        return "Toit: " + toit + ", kogus=" + kogus + "g, kalorid=" + kalorid + ", kaloried toidus kokku:" + kaloreid();
+    }
 }
