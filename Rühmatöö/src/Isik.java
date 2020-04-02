@@ -65,7 +65,7 @@ public abstract class Isik {
 
     public String tegevuseSuvalineSoovitus(){
         int listiSuurus = tegevused.size();
-        String tegevus = tegevused.get((int)Math.random()*listiSuurus);
+        String tegevus = tegevused.get((int)(Math.random()*listiSuurus));
         return tegevus;
     }
 
@@ -77,8 +77,15 @@ public abstract class Isik {
     abstract double BMR();
     //Põhiline ainevahetuse kiirus/ Basal Metabolic Rate https://www.verywellfit.com/what-is-bmr-or-basal-metabolic-rate-3495380;
 
-    abstract double kaloritekulu();
-    //Kaloritekulu arvutamine soovitatud tegevuse kohta
+    public double kaloritekulu(){
+        //Kaloritekulu arvutamine soovitatud tegevuse kohta
+        int suvalisedMinutid = (int)(Math.random()*61); //Genereerib suvaliselt minutite arvu 0-st kuni 1 tunnini, kui palju tegevust võiks teha.
+        String[] tegevus = tegevuseSuvalineSoovitus().split(","); //Jaotab tegevuse kaheks: tegevuse nimetus ja tegevuse MET väärtus
+        Double kaloritekulu = suvalisedMinutid* (Double.parseDouble(tegevus[1])*this.kehakaal)/200; //Arvutab kui palju kaloreidkulub tegevust tehes minutite kohta
+        System.out.println(tegevus[0] + ": "+suvalisedMinutid+ " minutit kulutab " + Math.round(kaloritekulu*100)/100);
+        return Math.round(kaloritekulu*100)/100;
+    }
+
 
     abstract double vajaminevadKalorid();
     //Inimesele vajaminevate kalorite arvutamine, tema akttivuse ja BMRiga seoses
