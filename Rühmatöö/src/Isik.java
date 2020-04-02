@@ -3,9 +3,9 @@ public abstract class Isik {
     private int vanus;
     private double pikkus;
     private double kehakaal;
-    private String aktiivsus;
+    private int aktiivsus;
 
-    public Isik(String nimi, int vanus, double pikkus, double kehakaal, String aktiivsus) {
+    public Isik(String nimi, int vanus, double pikkus, double kehakaal, int aktiivsus) {
         this.nimi = nimi;
         this.vanus = vanus;
         this.pikkus = pikkus;
@@ -45,11 +45,11 @@ public abstract class Isik {
         this.kehakaal = kehakaal;
     }
 
-    public String getAktiivsus() {
+    public int getAktiivsus() {
         return aktiivsus;
     }
 
-    public void setAktiivsus(String aktiivsus) {
+    public void setAktiivsus(int aktiivsus) {
         this.aktiivsus = aktiivsus;
     }
 

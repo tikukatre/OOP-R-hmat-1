@@ -1,6 +1,6 @@
 public class Naine extends Isik {
 
-    public Naine(String nimi, int vanus, double pikkus, double kehakaal, String aktiivsus) {
+    public Naine(String nimi, int vanus, double pikkus, double kehakaal, int aktiivsus) {
         super(nimi, vanus, pikkus, kehakaal, aktiivsus);
     }
 
