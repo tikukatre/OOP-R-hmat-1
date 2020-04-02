@@ -116,9 +116,10 @@
     </state>
     <state x="830" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1585821245369" />
     <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585594693016" />
-    <state x="1011" y="115" key="CommitChangelistDialog2" timestamp="1585595781240">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="525" y="0" key="CommitChangelistDialog2" timestamp="1585823442021">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="525" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585823442021" />
     <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585595781240" />
     <state x="1082" y="262" key="FileChooserDialogImpl" timestamp="1585619390250">
       <screen x="0" y="0" width="1920" height="1040" />
