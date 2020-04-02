@@ -102,7 +102,13 @@
       <option name="project" value="LOCAL" />
       <updated>1585823193489</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Paar väikest muutust">
+      <created>1585826928750</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1585826928750</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +117,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Esimesed väljad" />
     <MESSAGE value="Lisasin tegevusi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lisasin tegevusi" />
+    <MESSAGE value="Paar väikest muutust" />
+    <option name="LAST_COMMIT_MESSAGE" value="Paar väikest muutust" />
   </component>
   <component name="WindowStateProjectService">
     <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585771597310">
@@ -122,10 +129,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585594693016" />
-    <state x="531" y="0" key="CommitChangelistDialog2" timestamp="1585823753132">
+    <state x="525" y="0" key="CommitChangelistDialog2" timestamp="1585826927784">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="531" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585823753132" />
+    <state x="525" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585826927784" />
     <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585823453874" />
     <state x="1082" y="262" key="FileChooserDialogImpl" timestamp="1585821952506">
       <screen x="0" y="0" width="1920" height="1040" />
