@@ -64,6 +64,7 @@ public abstract class Isik {
     }
 
     public String tegevuseSuvalineSoovitus(){
+        //Soovitab suvalist tegevust tegevustelistist
         int listiSuurus = tegevused.size();
         String tegevus = tegevused.get((int)(Math.random()*listiSuurus));
         return tegevus;
@@ -74,6 +75,7 @@ public abstract class Isik {
         return Math.round((this.kehakaal/(this.pikkus*this.pikkus))*100)/100;
     }
     public void soovitus(){
+        //Kontrollib mis kategooriasse kehamassiindeks kuulub ning jagab soovitusi.
         double BMI = kehamassiindeks();
         if ( BMI < 18.6){
             System.out.println("Tarbi rohkem toitu, oled alakaalus.");

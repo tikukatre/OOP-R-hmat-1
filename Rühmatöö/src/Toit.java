@@ -38,6 +38,6 @@ public class Toit {
 
     @Override
     public String toString() {
-        return "Toit: " + toit + ", kogus=" + kogus + "g, kalorid=" + kalorid + ", kaloried toidus kokku:" + kaloreid();
+        return "Toit: " + toit + ", kogus = " + kogus + "g, kalorid 100g kohta = " + kalorid + ", kaloreid toidus koguse kohta:" + kaloreid();
     }
 }
