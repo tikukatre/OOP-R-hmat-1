@@ -14,4 +14,9 @@ public class Naine extends Isik {
     double vajaminevadKalorid() {
         return BMR() * super.getAktiivsus();
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", vajaminevad kalorid: " + vajaminevadKalorid();
+    }
 }

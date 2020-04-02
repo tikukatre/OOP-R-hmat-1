@@ -19,7 +19,6 @@ public class Mees extends Isik {
 
     @Override
     public String toString() {
-        return super.toString();
-        return "Vajaminevad kalorid: " + vajaminevadKalorid();
+        return super.toString() + ", vajaminevad kalorid: " + vajaminevadKalorid();
     }
 }
