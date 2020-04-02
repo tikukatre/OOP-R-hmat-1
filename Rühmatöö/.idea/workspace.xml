@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Mees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Naine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Naine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Peaklass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Peaklass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1585826928750</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Vajaminevad kalorid">
+      <created>1585829054880</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1585829054880</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +126,8 @@
     <MESSAGE value="Esimesed väljad" />
     <MESSAGE value="Lisasin tegevusi" />
     <MESSAGE value="Paar väikest muutust" />
-    <option name="LAST_COMMIT_MESSAGE" value="Paar väikest muutust" />
+    <MESSAGE value="Vajaminevad kalorid" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vajaminevad kalorid" />
   </component>
   <component name="WindowStateProjectService">
     <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585771597310">
