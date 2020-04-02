@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="Esimesed väljad">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Peaklass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Isik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Isik.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Naine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Naine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Peaklass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Peaklass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +81,7 @@
       <workItem from="1585586492331" duration="50000" />
       <workItem from="1585592759128" duration="3021000" />
       <workItem from="1585619309427" duration="102000" />
-      <workItem from="1585743901536" duration="5251000" />
+      <workItem from="1585743901536" duration="5555000" />
     </task>
     <task id="LOCAL-00001" summary="Esimesed väljad">
       <created>1585594945481</created>
