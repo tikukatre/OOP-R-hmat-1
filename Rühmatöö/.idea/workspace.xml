@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="Esimesed väljad">
-      <change beforePath="$PROJECT_DIR$/src/Peaklass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Peaklass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Toit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/GetInputFromUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Isik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Isik.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Mees.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Mees.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Naine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Naine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Test.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +47,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
-  <component name="RunManager" selected="Application.GetInputFromUser">
+  <component name="RunManager" selected="Application.Peaklass">
     <configuration name="GetInputFromUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GetInputFromUser" />
       <module name="Rühmatöö" />
@@ -63,8 +69,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GetInputFromUser" />
         <item itemvalue="Application.Peaklass" />
+        <item itemvalue="Application.GetInputFromUser" />
       </list>
     </recent_temporary>
   </component>
@@ -105,9 +111,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585771597310" />
-    <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1585594693016">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="830" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1585821245369">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="830" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1585821245369" />
     <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585594693016" />
     <state x="1011" y="115" key="CommitChangelistDialog2" timestamp="1585595781240">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -117,21 +124,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1082" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585619390250" />
-    <state width="916" height="279" key="GridCell.Tab.0.bottom" timestamp="1585771571872">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1585820927910">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585820927910" />
     <state width="916" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585771571872" />
-    <state width="916" height="279" key="GridCell.Tab.0.center" timestamp="1585771571872">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1585820927910">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585820927910" />
     <state width="916" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585771571872" />
-    <state width="916" height="279" key="GridCell.Tab.0.left" timestamp="1585771571872">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1585820927910">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585820927910" />
     <state width="916" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585771571872" />
-    <state width="916" height="279" key="GridCell.Tab.0.right" timestamp="1585771571872">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1585820927910">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585820927910" />
     <state width="916" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585771571872" />
     <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585771492793">
       <screen x="0" y="0" width="1920" height="1040" />
