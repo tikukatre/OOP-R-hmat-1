@@ -33,6 +33,6 @@ public class Toit {
         this.kalorid = kalorid;
     }
     public double kaloreid(int kalorid, double kogus){
-        return this.kalorid*(this.kogus/100);
-    } // arvutab kui palju kaloreid oli selles koguses toidus, mis inimene sõi
+        return (double)this.kalorid*(this.kogus/100);   // arvutab kui palju kaloreid oli selles koguses toidus, mis inimene sõi
+    }
 }
