@@ -16,4 +16,8 @@ public class Naine extends Isik {
         Double kaloritekulu = suvalisedMinutid* (Integer.parseInt(tegevus[1])*super.getKehakaal());
         return kaloritekulu;
     }
+    @Override
+    double vajaminevadKalorid() {
+        return BMR() * super.getAktiivsus();
+    }
 }

@@ -79,4 +79,7 @@ public abstract class Isik {
 
     abstract double kaloritekulu();
     //Kaloritekulu arvutamine soovitatud tegevuse kohta
+
+    abstract double vajaminevadKalorid();
+    //Inimesele vajaminevate kalorite arvutamine, tema akttivuse ja BMRiga seoses
 }
