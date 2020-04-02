@@ -1,9 +1,14 @@
+import java.util.ArrayList;
+
 public abstract class Isik {
     private String nimi;
     private int vanus;
     private double pikkus;
     private double kehakaal;
     private int aktiivsus;
+    ArrayList<String> tegevused= new ArrayList<>();
+    String[] algtegevused = {"Kõnni toas tasa ringi,2","Pühi põrandaid,3.3","Tee kergeid venitusi,2.3","Tantsi,7.8","Tee süüa,2.5", "Korrasta voodi ja vaheta linad,3.3", "Sörgi kohapeal,7.0",
+    "Tee kääri hüppeid,8"};
 
     public Isik(String nimi, int vanus, double pikkus, double kehakaal, int aktiivsus) {
         this.nimi = nimi;
@@ -11,6 +16,8 @@ public abstract class Isik {
         this.pikkus = pikkus;
         this.kehakaal = kehakaal;
         this.aktiivsus = aktiivsus;
+
+
     }
 
     public String getNimi() {
@@ -53,10 +60,15 @@ public abstract class Isik {
         this.aktiivsus = aktiivsus;
     }
 
+
+
     public double kehamassiindeks(){
         return this.kehakaal/(this.pikkus*this.pikkus);
     }
 
     abstract double BMR();
     //Põhiline ainevahetuse kiirus/ Basal Metabolic Rate https://www.verywellfit.com/what-is-bmr-or-basal-metabolic-rate-3495380;
+
+    abstract double kaloritekulu();
+    //Kaloritekulu arvutamine soovitatud tegevuse kohta
 }

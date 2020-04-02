@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="Esimesed väljad">
-      <change beforePath="$PROJECT_DIR$/src/Peaklass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Peaklass.java" afterDir="false" />
+    <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="Uuendsu">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/GetInputFromUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Isik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Isik.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +37,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../OOP/Kodutööd/Kodutöö5" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -81,7 +83,7 @@
       <workItem from="1585586492331" duration="50000" />
       <workItem from="1585592759128" duration="3021000" />
       <workItem from="1585619309427" duration="102000" />
-      <workItem from="1585743901536" duration="5555000" />
+      <workItem from="1585743901536" duration="8892000" />
     </task>
     <task id="LOCAL-00001" summary="Esimesed väljad">
       <created>1585594945481</created>
@@ -90,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585594945482</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Esimesed väljad">
+      <created>1585819782457</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585819782457</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,14 +118,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585594693016" />
-    <state x="1011" y="115" key="CommitChangelistDialog2" timestamp="1585595781240">
+    <state x="1011" y="115" key="CommitChangelistDialog2" timestamp="1585820633766">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585595781240" />
-    <state x="1082" y="262" key="FileChooserDialogImpl" timestamp="1585619390250">
+    <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585820633766" />
+    <state x="1082" y="262" key="FileChooserDialogImpl" timestamp="1585821952506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1082" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585619390250" />
+    <state x="1082" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585821952506" />
     <state width="916" height="279" key="GridCell.Tab.0.bottom" timestamp="1585771571872">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -133,10 +142,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="916" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585771571872" />
-    <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585771492793">
+    <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585823133820">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585771492793" />
+    <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585823133820" />
     <state x="685" y="141" key="new project wizard" timestamp="1585619393239">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
