@@ -12,11 +12,11 @@ public class Naine extends Isik {
 
     @Override
     double vajaminevadKalorid() {
-        return BMR() * super.getAktiivsus();
+        return Math.round((BMR() * super.getAktiivsus())*100)/100;
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", vajaminevad kalorid: " + vajaminevadKalorid();
+        return super.toString() + " päevane energiavajadus on umbes " + vajaminevadKalorid();
     }
 }

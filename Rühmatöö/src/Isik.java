@@ -91,13 +91,14 @@ public abstract class Isik {
         }
     }
 
-    public double kaloritekulu(){
+    public void kaloritekulu(){
         //Kaloritekulu arvutamine soovitatud tegevuse kohta
         int suvalisedMinutid = (int)(Math.random()*61); //Genereerib suvaliselt minutite arvu 0-st kuni 1 tunnini, kui palju tegevust võiks teha.
         String[] tegevus = tegevuseSuvalineSoovitus().split(","); //Jaotab tegevuse kaheks: tegevuse nimetus ja tegevuse MET väärtus
         Double kaloritekulu = suvalisedMinutid* (Double.parseDouble(tegevus[1])*this.kehakaal)/200; //Arvutab kui palju kaloreidkulub tegevust tehes minutite kohta
-        System.out.println(tegevus[0] + ": "+suvalisedMinutid+ " minutit kulutab " + Math.round(kaloritekulu*100)/100);
-        return Math.round(kaloritekulu*100)/100;
+
+        System.out.println(tegevus[0] + ": "+suvalisedMinutid+ " minutit kulutab " + Math.round(kaloritekulu*100)/100 + " kalorit.");
+
     }
 
 
@@ -109,6 +110,6 @@ public abstract class Isik {
 
     @Override
     public String toString() {
-        return "Nimi= " + nimi;
+        return "Nimi: " + nimi;
     }
 }

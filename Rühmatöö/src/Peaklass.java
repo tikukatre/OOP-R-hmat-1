@@ -7,14 +7,17 @@ public class Peaklass {
 
         String[] sisestatudAndmed = sisestatakse.split(" ");
 
+        Toit toit = new Toit(sisestatudAndmed[6],Double.parseDouble(sisestatudAndmed[7]),Integer.parseInt(sisestatudAndmed[8]));
         if(sisestatudAndmed[0].equalsIgnoreCase("Naine")){
             Isik isik = new Naine(sisestatudAndmed[1],Integer.parseInt(sisestatudAndmed[2]),Double.parseDouble(sisestatudAndmed[3]),Double.parseDouble(sisestatudAndmed[4]),Integer.parseInt(sisestatudAndmed[5]));
             System.out.println(isik);
+            isik.kaloritekulu();
         }if(sisestatudAndmed[0].equalsIgnoreCase("Mees")){
             Isik isik = new Mees(sisestatudAndmed[1],Integer.parseInt(sisestatudAndmed[2]),Double.parseDouble(sisestatudAndmed[3]),Double.parseDouble(sisestatudAndmed[4]),Integer.parseInt(sisestatudAndmed[5]));
             System.out.println(isik);
+            isik.kaloritekulu();
         }
-        Toit toit = new Toit(sisestatudAndmed[6],Double.parseDouble(sisestatudAndmed[7]),Integer.parseInt(sisestatudAndmed[8]));
+
         System.out.println(toit);
 
     }

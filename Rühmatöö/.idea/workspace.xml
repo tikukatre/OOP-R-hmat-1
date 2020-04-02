@@ -6,9 +6,10 @@
       <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Isik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Isik.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Mees.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Mees.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Naine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Naine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Peaklass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Peaklass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Rühmatöö/Toit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Rühmatöö/Toit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Isik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Isik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mees.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Naine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Naine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Peaklass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Peaklass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Toit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Toit.java" afterDir="false" />
     </list>
@@ -125,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585834244853</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Peameetodi muudatus">
+      <created>1585835139331</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585835139331</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +155,8 @@
     <MESSAGE value="Paar väikest muutust" />
     <MESSAGE value="Kalortiekulu arvutamine" />
     <MESSAGE value="Soovitus kehamassiindeksi järgi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Soovitus kehamassiindeksi järgi" />
+    <MESSAGE value="Peameetodi muudatus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Peameetodi muudatus" />
   </component>
   <component name="WindowStateProjectService">
     <state x="40" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585771597310">
@@ -158,11 +167,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1245" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585594693016" />
-    <state x="1011" y="115" key="CommitChangelistDialog2" timestamp="1585834244201">
+    <state x="1011" y="115" key="CommitChangelistDialog2" timestamp="1585835138793">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="525" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585832549548" />
-    <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585834244201" />
+    <state x="1011" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585835138793" />
     <state x="368" y="92" key="DiffContextDialog" timestamp="1585833792206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -171,22 +180,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1082" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585821952506" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1585834969433">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1585836358976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585834969433" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1585834969432">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585836358976" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1585836358976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585834969432" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1585834969432">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585836358976" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1585836358976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585834969432" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1585834969432">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585836358976" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1585836358976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585834969432" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585836358976" />
     <state width="916" height="344" key="GridCell.Tab.1.bottom" timestamp="1585830329357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
