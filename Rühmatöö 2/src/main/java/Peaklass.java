@@ -91,12 +91,16 @@ public class Peaklass extends Application {
         Label sugu=new Label("Sugu ");
 
         //Soovaliku kast, et nad oleksid üks teise kõrval mitte all võid teha sarnase kehalise aktiivuse kohta
+        ToggleGroup sooGrupp = new ToggleGroup();
+
         HBox soovalik = new HBox();
         soovalik.setSpacing(25);
         soovalik.setPadding(new Insets(5));
         soovalik.setAlignment(Pos.CENTER_LEFT);
         RadioButton mees = new RadioButton("Mees");
+        mees.setToggleGroup(sooGrupp);
         RadioButton naine = new RadioButton("Naine");
+        naine.setToggleGroup(sooGrupp);
         soovalik.getChildren().addAll(mees,naine);
 
 
@@ -115,8 +119,44 @@ public class Peaklass extends Application {
         TextField kehakaaluSisestus=new TextField();
         kehakaaluSisestus.setMaxWidth(40);
 
+
+        HBox nupud = new HBox();
+        nupud.setSpacing(50);
+        nupud.setPadding(new Insets(5));
+        nupud.setAlignment(Pos.CENTER_LEFT);
+        Button kinnita = new Button("Kinnita");
+        Button tyhista = new Button("Kustuta");
+        nupud.getChildren().addAll(kinnita,tyhista);
         //väljade lisamine keskel olevasse kasti
-       keskel.getChildren().addAll(sugu, soovalik, nimi,nimeSisestus,vanus,vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus);
+        keskel.getChildren().addAll(sugu, soovalik, nimi,nimeSisestus,vanus,
+                vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,nupud);
+
+        //Soovaliku vastuse kontrolliminepeale kinnitamist
+        kinnita.setOnAction(e->
+        {
+
+              //Praegu võtab aktiivsuse argumendiks ühe!!!
+
+            if(mees.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
+                //System.out.println("Mees"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
+                Mees meesIsend= new Mees(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),1);
+                System.out.println(meesIsend);
+            }else if(naine.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
+                //System.out.println("Naine"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
+                Naine naineIsend = new Naine(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),1);
+                System.out.println(naineIsend);
+            }
+        });
+        //Tühistab väljad, kui kustuta nuppu on vajutatud.
+        tyhista.setOnAction(e->{
+            mees.setSelected(false);
+            naine.setSelected(false);
+            nimeSisestus.clear();
+            vanuseSisestus.clear();
+            pikkuseSisestus.clear();
+            kehakaaluSisestus.clear();
+        });
+
 
 
 
