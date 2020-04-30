@@ -1,4 +1,6 @@
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
@@ -100,12 +102,30 @@ public class Peaklass extends Application {
         TabPane tabPaneRight = new TabPane();
         tabPaneRight.getTabs().addAll(new Tab("Outline"),
                 new Tab("Task List"));
+       VBox keskel = new VBox();
+       keskel.setSpacing(10);
+       keskel.setPadding(new Insets(5));
+       keskel.setAlignment(Pos.CENTER_LEFT);
+
+
+        Label nimi=new Label("Nimi ");
+        Label vanus=new Label("Vanus ");
+        Label pikkus= new Label("Pikkus(m) ");
+        Label kehakaal=new Label("Kehakaal(kg) ");
+        TextField nimeSisestus=new TextField();
+        TextField vanuseSisestus=new TextField();
+        TextField pikkuseSisestus=new TextField();
+        TextField kehakaaluSisestus=new TextField();
+
+       keskel.getChildren().addAll(nimi,nimeSisestus,vanus,vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus);
+
+
 
         borderPane.setTop(vbox);
         borderPane.setLeft(tabPaneLeft);
-        borderPane.setCenter(new TextArea());
+        borderPane.setCenter(keskel);
         borderPane.setRight(tabPaneRight);
-        borderPane.setBottom(new Label("Status text: Borderpane demo"));
+
 
         return borderPane;
     }
