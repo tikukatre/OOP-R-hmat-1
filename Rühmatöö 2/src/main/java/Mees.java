@@ -19,7 +19,7 @@ public class Mees extends Isik {
 
     @Override
     public String toString() {
-        return super.toString() + " päevane energiavajadus on umbes " + vajaminevadKalorid();
+        return super.toString() + "Päevane energiavajadus: " + vajaminevadKalorid()+"\n";
     }
 }
 

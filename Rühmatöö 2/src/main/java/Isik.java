@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class Isik {
     private String nimi;
@@ -83,31 +85,41 @@ public abstract class Isik {
     public double kehamassiindeks(){
         return Math.round((this.kehakaal/(this.pikkus*this.pikkus))*100.0)/100.0;
     }
-    public void soovitus(){
+    public String soovitus(){
         //Kontrollib mis kategooriasse kehamassiindeks kuulub ning jagab soovitusi.
         double BMI = kehamassiindeks();
+        String soovitus = "";
         if ( BMI < 18.6){
-            System.out.println("Tarbi rohkem toitu, oled alakaalus.");
+
+            soovitus="Tarbi rohkem toitu,\noled alakaalus.";
         }
         if ( BMI > 25){
-            System.out.println("Pead natuke rohkem liigutama, oled natuke ülekaalus");
+
+            soovitus="Pead rohkem liigutama,\noled natuke ülekaalus";
         }
         if (BMI > 30){
-            System.out.println("Tee trenni või tarbi vähem toitu, sest oled üsna ülekaalus.");
+
+            soovitus="Tee trenni või tarbi vähem toitu,\nsest oled üsna ülekaalus.";
         }
         if( BMI > 18.5 & BMI <= 25 ){
-            System.out.println("Oled normaalkaalus.");
+
+            soovitus="Oled normaalkaalus.";
         }
+        return soovitus;
     }
 
-    public double kaloritekulu(){
+    public Map<Double,String> kaloritekulu(){
+        Map<Double,String> tulemus = new HashMap<>();
         //Kaloritekulu arvutamine soovitatud tegevuse kohta
+
         int suvalisedMinutid = (int)(Math.random()*61); //Genereerib suvaliselt minutite arvu 0-st kuni 1 tunnini, kui palju tegevust võiks teha.
         String[] tegevus = tegevuseSuvalineSoovitus().split(","); //Jaotab tegevuse kaheks: tegevuse nimetus ja tegevuse MET väärtus
         double kaloritekulu = suvalisedMinutid* (Double.parseDouble(tegevus[1])*this.kehakaal)/200; //Arvutab kui palju kaloreidkulub tegevust tehes minutite kohta
 
-        System.out.println(tegevus[0] + ": "+suvalisedMinutid+ " minutit kulutab " + Math.round(kaloritekulu*100)/100 + " kalorit.");
-        return Math.round(kaloritekulu*100.0)/100.0;
+        String tekst = tegevus[0] + ": "+suvalisedMinutid+ " minutit\nKulutab: " + Math.round(kaloritekulu*100)/100 + " kalorit.";
+        kaloritekulu=Math.round(kaloritekulu*100.0)/100.0;
+        tulemus.put(kaloritekulu,tekst);
+        return tulemus;
     }
 
 
@@ -119,6 +131,10 @@ public abstract class Isik {
 
     @Override
     public String toString() {
-        return "Nimi: " + nimi;
+        return "Nimi: " + nimi +"\n"+
+                "Vanus: "+ vanus +"\n"+
+                "Pikkus: "+ pikkus +"\n"+
+                "Kehakaal: "+ kehakaal+"\n"+
+                "Aktiivus: "+aktiivsus+"\n";
     }
 }

@@ -5,19 +5,29 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
+
+import java.util.Map;
 
 public class Peaklass extends Application {
 
-    public static void tegevusKulutabToidu(double toidukaloreid, double tegevuseKulu ){
-        if(toidukaloreid<tegevuseKulu){
-            System.out.println("Tegevus nõuab rohkem kaloreid, kui toidust saad.");
-        }if(toidukaloreid==tegevuseKulu){
-            System.out.println("Tegevus nõuab sama palju kaloreid, kui toidust saad.");
-        }else{
-            System.out.println("Tegevus kulutab vähem kaloreid, kui toidust saad.");
+    public static String tegevusKulutabToidu(Map<Double,String> tegevuseKulu, double  toidukaloreid ){
+        Double kulu=0.0;
+        String lause = "";
+        for (Double arv:tegevuseKulu.keySet()) {
+            kulu=arv;
         }
+        if(toidukaloreid<kulu){
+            lause ="Tegevus nõuab rohkem kaloreid, kui toidust saad.";
+        } else if(toidukaloreid==kulu){
+            lause ="Tegevus nõuab sama palju kaloreid, kui toidust saad.";
+        }else{
+           lause="Tegevus kulutab vähem kaloreid, kui toidust saad.";
+        }
+        return lause;
     }
 
     public static void main(String[] args) {
@@ -74,14 +84,6 @@ public class Peaklass extends Application {
         vbox.getChildren().addAll(ylemineriba);
 
 
-        TabPane tabPaneLeft = new TabPane();
-        Tab tab1 = new Tab("Project List");
-        tabPaneLeft.getTabs().addAll(tab1, new Tab("Explorer"));
-
-        TabPane tabPaneRight = new TabPane();
-        tabPaneRight.getTabs().addAll(new Tab("Outline"),
-                new Tab("Task List"));
-
         //Keskmine osa (võid teha ka eraldi meetodiks nagu see praegu on, mis tagastab Vboxi
        VBox keskel = new VBox();
        keskel.setSpacing(10);
@@ -131,21 +133,41 @@ public class Peaklass extends Application {
         keskel.getChildren().addAll(sugu, soovalik, nimi,nimeSisestus,vanus,
                 vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,nupud);
 
+
+        StackPane vasempool = new StackPane();
+        vasempool.setPrefSize(300,450);
+        vasempool.setPadding(new Insets(5));
+        Label info = new Label("Siia kuvatakse saadud info");
+        //Võid fonti muuta
+        info.setFont(new Font("Arial",15));
+        vasempool.getChildren().addAll(info);
+        vasempool.setAlignment(Pos.TOP_CENTER);
+
+
+
+        borderPane.setTop(vbox);
+        borderPane.setLeft(vasempool);
+        borderPane.setCenter(keskel);
+
+
+        //Sündmused
         //Soovaliku vastuse kontrolliminepeale kinnitamist
         kinnita.setOnAction(e->
         {
 
-              //Praegu võtab aktiivsuse argumendiks ühe!!!
+            //Praegu võtab aktiivsuse argumendiks ühe!!!
 
             if(mees.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
                 //System.out.println("Mees"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
-                Mees meesIsend= new Mees(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),1);
-                System.out.println(meesIsend);
+                Isik isend= new Mees(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),1);
+                naitaInfot(info,isend);
+
             }else if(naine.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
                 //System.out.println("Naine"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
-                Naine naineIsend = new Naine(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),1);
-                System.out.println(naineIsend);
+                Isik isend = new Naine(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),1);
+                naitaInfot(info,isend);
             }
+
         });
         //Tühistab väljad, kui kustuta nuppu on vajutatud.
         tyhista.setOnAction(e->{
@@ -155,17 +177,25 @@ public class Peaklass extends Application {
             vanuseSisestus.clear();
             pikkuseSisestus.clear();
             kehakaaluSisestus.clear();
+            info.setText("");
+
         });
-
-
-
-
-        borderPane.setTop(vbox);
-        borderPane.setLeft(tabPaneLeft);
-        borderPane.setCenter(keskel);
-        //borderPane.setRight(tabPaneRight);
 
 
         return borderPane;
     }
+
+
+    void naitaInfot(Label info, Isik isik){
+        Map<Double,String> tegevusekulu = isik.kaloritekulu();
+        double voti=0.0;
+        for(double kulu : tegevusekulu.keySet()){
+            voti=kulu;
+
+        }
+        info.setText(isik.toString() +isik.soovitus()+"\n"+tegevusekulu.get(voti));
+
+    }
+
+
 }

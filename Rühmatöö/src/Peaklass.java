@@ -5,7 +5,7 @@ public class Peaklass {
     public static void tegevusKulutabToidu(double toidukaloreid, double tegevuseKulu ){
         if(toidukaloreid<tegevuseKulu){
             System.out.println("Tegevus nõuab rohkem kaloreid, kui toidust saad.");
-        }if(toidukaloreid==tegevuseKulu){
+        } else if(toidukaloreid==tegevuseKulu){
             System.out.println("Tegevus nõuab sama palju kaloreid, kui toidust saad.");
         }else{
             System.out.println("Tegevus kulutab vähem kaloreid, kui toidust saad.");
