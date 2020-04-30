@@ -4,6 +4,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -55,7 +56,7 @@ public class Peaklass extends Application {
 
     @Override
     public void start(Stage stage) {
-        Scene scene = new Scene(createBorderPane(), 250, 200);
+        Scene scene = new Scene(createBorderPane(), 600, 450);
         stage.setTitle("Layout Demo");
         stage.setScene(scene);
         stage.show();
@@ -64,67 +65,65 @@ public class Peaklass extends Application {
     public BorderPane createBorderPane() {
 
         BorderPane borderPane = new BorderPane();
-/*
-        MenuBar menuBar = new MenuBar();
-        Menu peaMenyy = new Menu("Logitud andmed");
-        peaMenyy.getItems().addAll(new MenuItem("Salvesta uued andmed"),
-                new SeparatorMenuItem(), new MenuItem("Vaata logituid andmeid"));
 
-        Menu abiMenyy = new Menu("Abi");
-        abiMenyy.getItems().addAll(new MenuItem("Kuidas andmeid sisestada?"),
-                new SeparatorMenuItem(), new MenuItem("Rohkem infot programmist."));
-        menuBar.getMenus().addAll(peaMenyy, abiMenyy);
-
-
- */
-        ToolBar toolbar = new ToolBar(new Separator(),
+        ToolBar ylemineriba = new ToolBar(new Separator(),
                 new Button("Vaata andmeid"), new Separator(), new Button("Salvesta andmed"),new Separator(),
                 new Button("Muuda andmeid"));
 
         VBox vbox = new VBox();
-        vbox.getChildren().addAll( toolbar);
+        vbox.getChildren().addAll(ylemineriba);
 
-        /*TreeItem<String> ti = new TreeItem<>("Projects");
-        ti.getChildren().addAll(
-                new TreeItem<String>("Project 1"),
-                new TreeItem<String>("Project 2"),
-                new TreeItem<String>("Project 3"),
-                new TreeItem<String>("Project 4"));
-        TreeView<String> tv = new TreeView<String>(ti);
-
-         */
 
         TabPane tabPaneLeft = new TabPane();
         Tab tab1 = new Tab("Project List");
-        //tab1.setContent(tv);
         tabPaneLeft.getTabs().addAll(tab1, new Tab("Explorer"));
 
         TabPane tabPaneRight = new TabPane();
         tabPaneRight.getTabs().addAll(new Tab("Outline"),
                 new Tab("Task List"));
+
+        //Keskmine osa (võid teha ka eraldi meetodiks nagu see praegu on, mis tagastab Vboxi
        VBox keskel = new VBox();
        keskel.setSpacing(10);
-       keskel.setPadding(new Insets(5));
+       keskel.setPadding(new Insets(5,5,5,5));
        keskel.setAlignment(Pos.CENTER_LEFT);
 
+        Label sugu=new Label("Sugu ");
 
+        //Soovaliku kast, et nad oleksid üks teise kõrval mitte all võid teha sarnase kehalise aktiivuse kohta
+        HBox soovalik = new HBox();
+        soovalik.setSpacing(25);
+        soovalik.setPadding(new Insets(5));
+        soovalik.setAlignment(Pos.CENTER_LEFT);
+        RadioButton mees = new RadioButton("Mees");
+        RadioButton naine = new RadioButton("Naine");
+        soovalik.getChildren().addAll(mees,naine);
+
+
+
+        //Muud lihtsamad väljas
         Label nimi=new Label("Nimi ");
         Label vanus=new Label("Vanus ");
         Label pikkus= new Label("Pikkus(m) ");
         Label kehakaal=new Label("Kehakaal(kg) ");
         TextField nimeSisestus=new TextField();
+        nimeSisestus.setMaxWidth(100);
         TextField vanuseSisestus=new TextField();
+        vanuseSisestus.setMaxWidth(40);
         TextField pikkuseSisestus=new TextField();
+        pikkuseSisestus.setMaxWidth(40);
         TextField kehakaaluSisestus=new TextField();
+        kehakaaluSisestus.setMaxWidth(40);
 
-       keskel.getChildren().addAll(nimi,nimeSisestus,vanus,vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus);
+        //väljade lisamine keskel olevasse kasti
+       keskel.getChildren().addAll(sugu, soovalik, nimi,nimeSisestus,vanus,vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus);
 
 
 
         borderPane.setTop(vbox);
         borderPane.setLeft(tabPaneLeft);
         borderPane.setCenter(keskel);
-        borderPane.setRight(tabPaneRight);
+        //borderPane.setRight(tabPaneRight);
 
 
         return borderPane;
