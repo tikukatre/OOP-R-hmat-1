@@ -16,7 +16,7 @@ public class Peaklass extends Application {
 
     public static String tegevusKulutabToidu(Map<Double,String> tegevuseKulu, double  toidukaloreid ){
         Double kulu=0.0;
-        String lause = "";
+        String lause;
         for (Double arv:tegevuseKulu.keySet()) {
             kulu=arv;
         }
@@ -32,42 +32,12 @@ public class Peaklass extends Application {
 
     public static void main(String[] args) {
         launch(args);
-
-
-        //Kood vanast projektist, mis tuleb nüüd javafx graafikaga ümber teha
-        /*
-         String sisestatakse = JOptionPane.showInputDialog(null, "Palun sisestada andmeid järgmiselt:\nSugu nimi vanus pikkus(m) kehakaal(kg) aktiivsus toit kogus kalorid(100g kohta).\nAktiivsus valida numbrina 1-4: Minimaalne (1),kerge (2),keskmine (3),väga aktiivne (4). \nKõik andmed palume sisestada järjest, tühikud vahel, ilma komadeta. ", "Andmete sisestamine",
-                JOptionPane.QUESTION_MESSAGE);
-
-        String[] sisestatudAndmed = sisestatakse.split(" ");
-
-        Toit toit = new Toit(sisestatudAndmed[6],Double.parseDouble(sisestatudAndmed[7]),Integer.parseInt(sisestatudAndmed[8]));
-        System.out.println(toit);
-        //Loome isiku vastavalt soole
-        if(sisestatudAndmed[0].equalsIgnoreCase("Naine")){//Kontrollib, kas esimene siestatud sõna on naine.
-            Isik isik = new Naine(sisestatudAndmed[1],Integer.parseInt(sisestatudAndmed[2]),Double.parseDouble(sisestatudAndmed[3]),Double.parseDouble(sisestatudAndmed[4]),Integer.parseInt(sisestatudAndmed[5]));
-            System.out.println(isik);
-            isik.soovitus();
-            System.out.println("Suvaliselt soovitatud tegevus:");
-            double kulu = isik.kaloritekulu();
-            tegevusKulutabToidu(toit.kaloreid(),kulu);
-
-        }if(sisestatudAndmed[0].equalsIgnoreCase("Mees")){//Kontrollib, kas esimene siestatud sõna on mees.
-            Isik isik = new Mees(sisestatudAndmed[1],Integer.parseInt(sisestatudAndmed[2]),Double.parseDouble(sisestatudAndmed[3]),Double.parseDouble(sisestatudAndmed[4]),Integer.parseInt(sisestatudAndmed[5]));
-            System.out.println(isik);
-            isik.soovitus();
-            System.out.println("Suvaliselt soovitatud tegevus:");
-            double kulu = isik.kaloritekulu();
-            tegevusKulutabToidu(toit.kaloreid(),kulu);
-
-        }
-         */
     }
 
     @Override
     public void start(Stage stage) {
-        Scene scene = new Scene(createBorderPane(), 600, 450);
-        stage.setTitle("Layout Demo");
+        Scene scene = new Scene(createBorderPane(), 800, 450);
+        stage.setTitle("OOP Rühmatöö 2");
         stage.setScene(scene);
         stage.show();
     }
@@ -87,7 +57,7 @@ public class Peaklass extends Application {
         //Keskmine osa (võid teha ka eraldi meetodiks nagu see praegu on, mis tagastab Vboxi
        VBox keskel = new VBox();
        keskel.setSpacing(10);
-       keskel.setPadding(new Insets(5,5,5,5));
+       keskel.setPadding(new Insets(5));
        keskel.setAlignment(Pos.CENTER_LEFT);
 
         Label sugu=new Label("Sugu ");
@@ -124,7 +94,7 @@ public class Peaklass extends Application {
 
         HBox nupud = new HBox();
         nupud.setSpacing(50);
-        nupud.setPadding(new Insets(5));
+        nupud.setPadding(new Insets(25,25,5,5));
         nupud.setAlignment(Pos.CENTER_LEFT);
         Button kinnita = new Button("Kinnita");
         Button tyhista = new Button("Kustuta");
@@ -140,15 +110,39 @@ public class Peaklass extends Application {
         Label info = new Label("Siia kuvatakse saadud info");
         //Võid fonti muuta
         info.setFont(new Font("Arial",15));
+
         vasempool.getChildren().addAll(info);
         vasempool.setAlignment(Pos.TOP_CENTER);
+
+
+        VBox toidukast=new VBox();
+        toidukast.setSpacing(25);
+        toidukast.setPadding(new Insets(5));
+        toidukast.setAlignment(Pos.CENTER_LEFT);
+        toidukast.setMaxSize(250,100);
+        Label nimetus=new Label("Toidu nimetus:");
+        Label kogus=new Label("Kogus");
+        Label kaloreid= new Label("Kaloreid 100g kohta ");
+        TextField nimetuseSisestus=new TextField();
+        nimeSisestus.setMaxWidth(100);
+        TextField koguseSisestus=new TextField();
+        koguseSisestus.setMaxWidth(40);
+        TextField kaloeridSisestus=new TextField();
+        kaloeridSisestus.setMaxWidth(40);
+        toidukast.getChildren().addAll(nimetus,nimetuseSisestus,kogus,koguseSisestus,kaloreid,kaloeridSisestus);
+
+
+
+
+
+
 
 
 
         borderPane.setTop(vbox);
         borderPane.setLeft(vasempool);
         borderPane.setCenter(keskel);
-
+        borderPane.setRight(toidukast);
 
         //Sündmused
         //Soovaliku vastuse kontrolliminepeale kinnitamist
