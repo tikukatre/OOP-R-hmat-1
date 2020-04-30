@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/OOP-R-hmat-1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/src/main/java/Isik.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/src/main/java/Mees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/src/main/java/Naine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/src/main/java/Peaklass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/src/main/java/Toit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +85,7 @@
       <workItem from="1585619309427" duration="102000" />
       <workItem from="1585743901536" duration="9195000" />
       <workItem from="1588168478687" duration="3072000" />
-      <workItem from="1588187097797" duration="1712000" />
+      <workItem from="1588187097797" duration="2371000" />
     </task>
     <task id="LOCAL-00001" summary="Esimesed väljad">
       <created>1585594945481</created>
