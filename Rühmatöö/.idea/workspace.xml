@@ -58,7 +58,7 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Peaklassvana">
+  <component name="RunManager" selected="Application.Peaklass">
     <configuration name="GetInputFromUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GetInputFromUser" />
       <module name="Rühmatöö" />
@@ -75,12 +75,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Peaklass" />
       <item itemvalue="Application.GetInputFromUser" />
-      <item itemvalue="Application.Peaklassvana" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Peaklassvana" />
         <item itemvalue="Application.GetInputFromUser" />
       </list>
     </recent_temporary>

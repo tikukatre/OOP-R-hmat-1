@@ -21,22 +21,7 @@ import java.util.Map;
 
 public class Peaklass extends Application {
 
-    public static String tegevusKulutabToidu(Map<Double,String> tegevuseKulu, double  toidukaloreid ){
-        Double kulu=0.0;
-        String lause;
-        for (Double arv:tegevuseKulu.keySet()) {
-            kulu=arv;
-        }
-        if(toidukaloreid<kulu){
-            lause ="Tegevus nõuab rohkem kaloreid, kui toidust saad.";
-        } else if(toidukaloreid==kulu){
-            lause ="Tegevus nõuab sama palju kaloreid, kui toidust saad.";
-        }else{
-           lause="Tegevus kulutab vähem kaloreid, kui toidust saad.";
-        }
-        return lause;
-    }
-
+   //Peameetod
     public static void main(String[] args) {
         launch(args);
     }
@@ -50,7 +35,7 @@ public class Peaklass extends Application {
         stage.show();
     }
 
-    public BorderPane createBorderPane() {
+    public BorderPane createBorderPane() throws ValeSisendErind{
         //Peaaken.
         BorderPane borderPane = new BorderPane();
 
@@ -192,7 +177,6 @@ public class Peaklass extends Application {
 
 
 
-
         //Sündmused
         //Isiku loomine peale kinnitamise nupu vajutamist
         kinnita.setOnAction(e->
@@ -240,10 +224,10 @@ public class Peaklass extends Application {
                 if(mees.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
                     //System.out.println("Mees"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
                     Isik isend= new Mees(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),aktiivsuseValik);
+                        naitaInfot(info,isend);
+                        System.out.println(info.getText());
+                        System.out.println(aktiivsusGrupp.getSelectedToggle().getProperties().values().toString());
 
-                    naitaInfot(info,isend);
-                    System.out.println(info.getText());
-                    System.out.println(aktiivsusGrupp.getSelectedToggle().getProperties().values().toString());
 
                 }else if(naine.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
                     //System.out.println("Naine"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
@@ -306,11 +290,10 @@ public class Peaklass extends Application {
             kaloreidSisestus.clear();
         });
 
-
-
-
         return borderPane;
     }
+
+
 
     //Loob uue akna, mis ei lase edasi toimetada, kuni see on kinni pandud.
     //Abiks oli : https://youtu.be/SpL3EToqaXA ;
@@ -355,6 +338,29 @@ public class Peaklass extends Application {
 
 
         }
+    }
+
+
+
+
+    public static String tegevusKulutabToidu(Map<Double,String> tegevuseKulu, double  toidukaloreid ){
+        //Meetod, mis tagastab, kas suvaline saadud tegevus kulutab toidustsaadud kalorid
+
+        Double kulu=0.0;
+        String lause;
+        for (Double arv:tegevuseKulu.keySet()) {
+            kulu=arv;
+        }
+        if(toidukaloreid==0||tegevuseKulu.isEmpty()){
+            lause="Te pole sisestanud kõiki andmeid.";
+        }else if(toidukaloreid<kulu){
+            lause ="Tegevus nõuab rohkem kaloreid, kui toidust saad.";
+        } else if(toidukaloreid==kulu){
+            lause ="Tegevus nõuab sama palju kaloreid, kui toidust saad.";
+        }else{
+            lause="Tegevus kulutab vähem kaloreid, kui toidust saad.";
+        }
+        return lause;
     }
 
 
