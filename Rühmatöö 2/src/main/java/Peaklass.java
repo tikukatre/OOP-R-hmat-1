@@ -2,6 +2,9 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
@@ -10,7 +13,9 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.*;
+import java.net.URL;
 import java.util.Map;
 
 public class Peaklass extends Application {
@@ -49,9 +54,13 @@ public class Peaklass extends Application {
         BorderPane borderPane = new BorderPane();
 
         //Ülemineriba ehk nö tööriistariba.
+        Hyperlink githubiLink = new Hyperlink("GitHub");
+        Button vaata = new Button("Vaata andmeid");
+        Button salvesta = new Button("Salvsta andmed");
+        Button juhend = new Button("Juhend");
         ToolBar ylemineriba = new ToolBar(new Separator(),
-                new Button("Vaata andmeid"), new Separator(), new Button("Salvesta andmed"),new Separator(),
-                new Button("Juhend"));
+               vaata, new Separator(), salvesta,new Separator(),
+               juhend, new Separator(), githubiLink);
 
         VBox vbox = new VBox();
         vbox.getChildren().addAll(ylemineriba);
@@ -120,6 +129,7 @@ public class Peaklass extends Application {
         Button kinnita = new Button("Kinnita");
         Button tyhista = new Button("Tühista");
         nupud.getChildren().addAll(kinnita,tyhista);
+
         //väljade lisamine keskel olevasse kasti
         keskel.getChildren().addAll(sugu, soovalik,aktiivsus,Aktiivsus, nimi,nimeSisestus,vanus,
                 vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,nupud);
@@ -128,7 +138,7 @@ public class Peaklass extends Application {
         VBox vasempool = new VBox();
         vasempool.setPrefSize(300,450);
         vasempool.setPadding(new Insets(5));
-        Label info = new Label("Siia kuvatakse saadud info");
+        Label info = new Label("Siia kuvatakse saadud isiku info");
         //Võid fonti muuta
         info.setFont(new Font("Arial",15));
         Label toiduinfo = new Label("");
@@ -265,6 +275,14 @@ public class Peaklass extends Application {
         });
 
 
+        githubiLink.setOnAction(e->{
+            try {
+                Desktop.getDesktop().browse(new URL("https://github.com/tikukatre/OOP-R-hmat-1").toURI());
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+
 
 
         //Tühistab väljad, kui kustuta nuppu on vajutatud.
@@ -290,7 +308,7 @@ public class Peaklass extends Application {
 
         return borderPane;
     }
-
+    static void
 
     void naitaInfot(Label info, Isik isik){
         Map<Double,String> tegevusekulu = isik.kaloritekulu();
