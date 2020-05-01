@@ -5,7 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
@@ -125,14 +124,18 @@ public class Peaklass extends Application {
                 vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,aktiivsus,Aktiivsus,nupud);
 
 
-        StackPane vasempool = new StackPane();
+        VBox vasempool = new VBox();
         vasempool.setPrefSize(300,450);
         vasempool.setPadding(new Insets(5));
         Label info = new Label("Siia kuvatakse saadud info");
         //Võid fonti muuta
         info.setFont(new Font("Arial",15));
+        Label toiduinfo = new Label("");
+        toiduinfo.setFont(new Font("Arial",15));
 
-        vasempool.getChildren().addAll(info);
+
+
+        vasempool.getChildren().addAll(info,toiduinfo);
         vasempool.setAlignment(Pos.TOP_CENTER);
 
 
@@ -209,6 +212,12 @@ public class Peaklass extends Application {
 
         });
 
+        kinnita2.setOnAction(e->{
+            if(nimetuseSisestus.getText()!=null&&koguseSisestus.getText()!=null&&kaloeridSisestus.getText()!=null){
+                naitaToiduInfot(toiduinfo,new Toit(nimeSisestus.getText(),Double.parseDouble(koguseSisestus.getText()),Integer.parseInt(kaloeridSisestus.getText())));
+            }
+        });
+
 
         return borderPane;
     }
@@ -223,6 +232,10 @@ public class Peaklass extends Application {
         }
         info.setText(isik.toString() +isik.soovitus()+"\n"+tegevusekulu.get(voti));
 
+    }
+
+    void naitaToiduInfot(Label toiduinfo, Toit toit){
+        toiduinfo.setText(toit.toString());
     }
 
     private static void salvesta() throws IOException {
