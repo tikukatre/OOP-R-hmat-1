@@ -15,8 +15,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.awt.*;
-import java.io.*;
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Map;
 
 public class Peaklass extends Application {
@@ -28,14 +29,16 @@ public class Peaklass extends Application {
 
 
     @Override
-    public void start(Stage stage) {
-        Scene scene = new Scene(createBorderPane(), 800, 500);
+    public void start(Stage stage) throws ValeSisendErind {
+        Scene stseen = new Scene(looPaigutus(), 800, 500);
         stage.setTitle("OOP Rühmatöö 2");
-        stage.setScene(scene);
+        stage.setScene(stseen);
         stage.show();
     }
 
-    public BorderPane createBorderPane() throws ValeSisendErind{
+
+    //Meetod, mis loob peamise paigutuse
+    public BorderPane looPaigutus() throws ValeSisendErind{
         //Peaaken.
         BorderPane borderPane = new BorderPane();
 
@@ -44,6 +47,17 @@ public class Peaklass extends Application {
         Button vaata = new Button("Vaata andmeid");
         Button salvesta = new Button("Salvesta andmed");
         Button juhend = new Button("Juhend");
+
+        String Juhend = "Palun sisestage Teilt küsitud andmed õigetesse lahtritesse. Aktiivsus valida numbrina 1-4: \n" +
+                "1-Minimaalne kehaline aktiivsus; \n" +
+                "2-Kerge (1-2 korda nädalas liikumist); \n" +
+                "3-Keskmine(3-5 korda nädalas);\n" +
+                "4-Väga aktiivne (iga päev).\n" +
+                "Kui olete andmed korralikult sisestanud, siis vajutage nuppu 'Kinnita', võite ka klaviatuuril vajutata 'Enter'\n" +
+                "Vasakpoolne plokk arvutab aktiivsuse, soo, kehakaalu ja vanuse põhjal välja kui palju kaloried on tervislik päevas tarbida.\n" +
+                "Lisaks sellele pakub programm välja suvaliselt valitud harjutuse, mida on hea kodustes tingimustes teha.\n" +
+                "Parempoolne plokk arvutab välja kui palju oli Teie tarbitud toidus kaloried.";
+
         ToolBar ylemineriba = new ToolBar(new Separator(),
                vaata, new Separator(), salvesta,new Separator(),
                juhend, new Separator(), githubiLink);
@@ -165,9 +179,6 @@ public class Peaklass extends Application {
 
 
 
-
-
-
         //Peaaknasse teiste komponentide lisamine.
         borderPane.setTop(vbox);
         borderPane.setLeft(vasempool);
@@ -175,9 +186,8 @@ public class Peaklass extends Application {
         borderPane.setRight(toidukast);
 
 
-
         ArrayList<String> sisestatud = new ArrayList();
-
+        //Lis kuhu lisatakse sisestatud andmete tekstid, et need faili salvestada.
 
         //Sündmused
         //Isiku loomine peale kinnitamise nupu vajutamist
@@ -199,12 +209,13 @@ public class Peaklass extends Application {
                 Isik isend= new Mees(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),aktiivsuseValik);
 
                 naitaInfot(info,isend);
-                System.out.println(aktiivsusGrupp.getSelectedToggle().getProperties().values().toString());
+                sisestatud.add(info.getText());
 
             }else if(naine.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
                 //System.out.println("Naine"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
                 Isik isend = new Naine(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),aktiivsuseValik);
                 naitaInfot(info,isend);
+                sisestatud.add(info.getText());
             }
 
         });
@@ -232,19 +243,16 @@ public class Peaklass extends Application {
 
                     naitaInfot(info,isend);
                     sisestatud.add(info.getText());
-                    System.out.println(aktiivsusGrupp.getSelectedToggle().getProperties().values().toString());
 
 
                 }else if(naine.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
                     //System.out.println("Naine"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
                     Isik isend = new Naine(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),aktiivsuseValik);
                     naitaInfot(info,isend);
+                    sisestatud.add(info.getText());
                 }
             }
         });
-
-
-
 
 
         //Toidu loomine peale toidu kinnitamise nupu vajutamist
@@ -265,7 +273,7 @@ public class Peaklass extends Application {
             }
         });
 
-
+        //Linkide vajutamine tööribal
         githubiLink.setOnAction(e->{
             try {
                 Desktop.getDesktop().browse(new URL("https://github.com/tikukatre/OOP-R-hmat-1").toURI());
@@ -274,7 +282,7 @@ public class Peaklass extends Application {
             }
         });
 
-        juhend.setOnAction(e->uusAken("Juhend", "Blah blah blah"));
+        juhend.setOnAction(e->uusAken("Juhend", Juhend));
 
 
 
@@ -307,14 +315,17 @@ public class Peaklass extends Application {
         Stage aken = new Stage();
         aken.initModality(Modality.APPLICATION_MODAL);
         aken.setTitle(pealkiri);
-        aken.setWidth(250);
+        aken.setWidth(500);
+
         Label tekst = new Label(sõnum);
         Button sulge = new Button("Sulge");
         sulge.setOnAction(e->aken.close());
         VBox paigutus = new VBox();
+        paigutus.setPadding(new Insets(10));
+        paigutus.setSpacing(10);
         paigutus.getChildren().addAll(tekst,sulge);
         paigutus.setAlignment(Pos.CENTER);
-        Scene stseen = new Scene(paigutus);
+        Scene stseen = new Scene(paigutus,400,300);
         aken.setScene(stseen);
         aken.showAndWait();
 
@@ -335,19 +346,11 @@ public class Peaklass extends Application {
         toiduinfo.setText(toit.toString());
     }
 
-    Label Juhend = new Label("Palen sisestage Teilt küsitud andmed õigetesse lahtritesse. Aktiivsus valida numbrina 1-4: \n" +
-            "1-Minimaalne kehaline aktiivsus; \n" +
-            "2-Kerge (1-2 korda nädalas liikumist); \n" +
-            "3-Keskmine(3-5 korda nädalas);\n" +
-            "4-Väga aktiivne (iga päev).\n" +
-            "Kui olete andmed korralikult sisestanud, siis vajutage nuppu 'Kinnita', võite ka klaviatuuril vajutata 'Enter'" +
-            "Vasakpoolne plokk arvutab aktiivsuse, soo, kehakaalu ja vanuse põhjal välja kui palju kaloried on tervislik päevas tarbida." +
-            "Lisaks sellele pakub programm välja suvaliselt valitud harjutuse, mida on hea kodustes tingimustes teha." +
-            "Parempoolne plokk arvutab välja kui palju oli Teie tarbitud toidus kaloried.");
+
 
     public void loeFaili(ArrayList<String> sisestatud) throws IOException{
 
-        }
+
     }
 
 
