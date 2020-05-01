@@ -11,6 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -283,6 +284,8 @@ public class Peaklass extends Application {
             }
         });
 
+        juhend.setOnAction(e->uusAken("Juhend", "Blah blah blah"));
+
 
 
         //Tühistab väljad, kui kustuta nuppu on vajutatud.
@@ -308,7 +311,22 @@ public class Peaklass extends Application {
 
         return borderPane;
     }
-    static void
+    static void uusAken(String pealkiri, String sõnum){
+        Stage aken = new Stage();
+        aken.initModality(Modality.APPLICATION_MODAL);
+        aken.setTitle(pealkiri);
+        aken.setWidth(250);
+        Label tekst = new Label(sõnum);
+        Button sulge = new Button("Sulge");
+        sulge.setOnAction(e->aken.close());
+        VBox paigutus = new VBox();
+        paigutus.getChildren().addAll(tekst,sulge);
+        paigutus.setAlignment(Pos.CENTER);
+        Scene stseen = new Scene(paigutus);
+        aken.setScene(stseen);
+        aken.showAndWait();
+
+    }
 
     void naitaInfot(Label info, Isik isik){
         Map<Double,String> tegevusekulu = isik.kaloritekulu();
