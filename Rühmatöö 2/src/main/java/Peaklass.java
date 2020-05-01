@@ -103,7 +103,6 @@ public class Peaklass extends Application {
         Aktiivsus.setPadding(new Insets(5));
         Aktiivsus.setAlignment(Pos.TOP_LEFT);
         RadioButton esimene = new RadioButton("1");
-
         esimene.setToggleGroup(aktiivsusGrupp);
         RadioButton teine = new RadioButton("2");
         teine.setToggleGroup(aktiivsusGrupp);
@@ -122,8 +121,8 @@ public class Peaklass extends Application {
         Button tyhista = new Button("Tühista");
         nupud.getChildren().addAll(kinnita,tyhista);
         //väljade lisamine keskel olevasse kasti
-        keskel.getChildren().addAll(sugu, soovalik, nimi,nimeSisestus,vanus,
-                vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,aktiivsus,Aktiivsus,nupud);
+        keskel.getChildren().addAll(sugu, soovalik,aktiivsus,Aktiivsus, nimi,nimeSisestus,vanus,
+                vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,nupud);
 
 
         VBox vasempool = new VBox();
@@ -212,6 +211,40 @@ public class Peaklass extends Application {
             }
 
         });
+
+        //Info nätamine, kui viimases lahtis vajutatakse "Enter"
+        kehakaaluSisestus.setOnKeyPressed(e->{
+            if(e.getCode().equals((KeyCode.ENTER))){
+                int aktiivsuseValik=0;
+                if (esimene.isSelected())
+                    aktiivsuseValik=1;
+                else if(teine.isSelected())
+                    aktiivsuseValik=2;
+                else if(kolmas.isSelected())
+                    aktiivsuseValik=3;
+                else if(neljas.isSelected())
+                    aktiivsuseValik=4;
+                //Praegu võtab aktiivsuse argumendiks ühe!!!
+
+                if(mees.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
+                    //System.out.println("Mees"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
+                    Isik isend= new Mees(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),aktiivsuseValik);
+
+                    naitaInfot(info,isend);
+                    System.out.println(aktiivsusGrupp.getSelectedToggle().getProperties().values().toString());
+
+                }else if(naine.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
+                    //System.out.println("Naine"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
+                    Isik isend = new Naine(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),aktiivsuseValik);
+                    naitaInfot(info,isend);
+                }
+            }
+        });
+
+
+
+
+
         //Toidu loomine peale toidu kinnitamise nupu vajutamist
         kinnita2.setOnAction(e->{
             if(nimetuseSisestus.getText()!=null&&koguseSisestus.getText()!=null&&kaloreidSisestus.getText()!=null){
@@ -219,7 +252,7 @@ public class Peaklass extends Application {
             }
         });
 
-
+        //Toidu info näitamine, kui viimases lahtris vajutatakse "Enter"
         kaloreidSisestus.setOnKeyPressed(e->{
             if (e.getCode().equals(KeyCode.ENTER))
             {
