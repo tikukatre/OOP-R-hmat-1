@@ -122,7 +122,7 @@ public class Peaklass extends Application {
         nupud.getChildren().addAll(kinnita,tyhista);
         //väljade lisamine keskel olevasse kasti
         keskel.getChildren().addAll(sugu, soovalik, nimi,nimeSisestus,vanus,
-                vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,aktiivsus,Aktiivsus);
+                vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,aktiivsus,Aktiivsus,nupud);
 
 
         StackPane vasempool = new StackPane();
@@ -154,12 +154,12 @@ public class Peaklass extends Application {
         HBox nupud2 = new HBox();
         nupud2.setSpacing(20);
         nupud2.setPadding(new Insets(25,25,5,5));
-        nupud2.setAlignment(Pos.BOTTOM_RIGHT);
+        nupud2.setAlignment(Pos.CENTER_LEFT);
         Button kinnita2 = new Button("Kinnita");
         Button tyhista2 = new Button("Tühista");
         nupud2.getChildren().addAll(kinnita2,tyhista2);
 
-        toidukast.getChildren().addAll(nimetus,nimetuseSisestus,kogus,koguseSisestus,kaloreid,kaloeridSisestus);
+        toidukast.getChildren().addAll(nimetus,nimetuseSisestus,kogus,koguseSisestus,kaloreid,kaloeridSisestus,nupud2);
 
 
 
@@ -173,7 +173,7 @@ public class Peaklass extends Application {
         borderPane.setLeft(vasempool);
         borderPane.setCenter(keskel);
         borderPane.setRight(toidukast);
-        borderPane.setBottom(nupud2);
+
 
 
 
