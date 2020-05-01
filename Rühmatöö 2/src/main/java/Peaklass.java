@@ -311,6 +311,9 @@ public class Peaklass extends Application {
 
         return borderPane;
     }
+
+    //Loob uue akna, mis ei lase edasi toimetada, kuni see on kinni pandud.
+    //Abiks oli : https://youtu.be/SpL3EToqaXA ;
     static void uusAken(String pealkiri, String sõnum){
         Stage aken = new Stage();
         aken.initModality(Modality.APPLICATION_MODAL);
