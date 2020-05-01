@@ -38,19 +38,20 @@ public class Peaklass extends Application {
 
     @Override
     public void start(Stage stage) {
-        Scene scene = new Scene(createBorderPane(), 800, 450);
+        Scene scene = new Scene(createBorderPane(), 800, 500);
         stage.setTitle("OOP Rühmatöö 2");
         stage.setScene(scene);
         stage.show();
     }
 
     public BorderPane createBorderPane() {
-
+        //Peaaken.
         BorderPane borderPane = new BorderPane();
 
+        //Ülemineriba ehk nö tööriistariba.
         ToolBar ylemineriba = new ToolBar(new Separator(),
                 new Button("Vaata andmeid"), new Separator(), new Button("Salvesta andmed"),new Separator(),
-                new Button("Muuda andmeid"));
+                new Button("Juhend"));
 
         VBox vbox = new VBox();
         vbox.getChildren().addAll(ylemineriba);
@@ -109,18 +110,19 @@ public class Peaklass extends Application {
         kolmas.setToggleGroup(aktiivsusGrupp);
         RadioButton neljas = new RadioButton("4");
         neljas.setToggleGroup(aktiivsusGrupp);
-        Aktiivsus.getChildren().addAll(aktiivsus,esimene,teine,kolmas,neljas);
+        Aktiivsus.getChildren().addAll(esimene,teine,kolmas,neljas);
 
+        //Kinnitamine ja tühistamine
         HBox nupud = new HBox();
-        nupud.setSpacing(50);
+        nupud.setSpacing(20);
         nupud.setPadding(new Insets(25,25,5,5));
         nupud.setAlignment(Pos.CENTER_LEFT);
         Button kinnita = new Button("Kinnita");
-        Button tyhista = new Button("Kustuta");
+        Button tyhista = new Button("Tühista");
         nupud.getChildren().addAll(kinnita,tyhista);
         //väljade lisamine keskel olevasse kasti
         keskel.getChildren().addAll(sugu, soovalik, nimi,nimeSisestus,vanus,
-                vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,Aktiivsus,nupud);
+                vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,aktiivsus,Aktiivsus);
 
 
         StackPane vasempool = new StackPane();
@@ -135,19 +137,28 @@ public class Peaklass extends Application {
 
 
         VBox toidukast=new VBox();
-        toidukast.setSpacing(25);
-        toidukast.setPadding(new Insets(5));
+        toidukast.setSpacing(10);
+        toidukast.setPadding(new Insets(5,10,5,0));
         toidukast.setAlignment(Pos.CENTER_LEFT);
-        toidukast.setMaxSize(250,100);
+        toidukast.setPrefSize(250,100);
         Label nimetus=new Label("Toidu nimetus:");
         Label kogus=new Label("Kogus");
         Label kaloreid= new Label("Kaloreid 100g kohta ");
         TextField nimetuseSisestus=new TextField();
-        nimeSisestus.setMaxWidth(100);
+        nimetuseSisestus.setMaxWidth(100);
         TextField koguseSisestus=new TextField();
         koguseSisestus.setMaxWidth(40);
         TextField kaloeridSisestus=new TextField();
         kaloeridSisestus.setMaxWidth(40);
+
+        HBox nupud2 = new HBox();
+        nupud2.setSpacing(20);
+        nupud2.setPadding(new Insets(25,25,5,5));
+        nupud2.setAlignment(Pos.BOTTOM_RIGHT);
+        Button kinnita2 = new Button("Kinnita");
+        Button tyhista2 = new Button("Tühista");
+        nupud2.getChildren().addAll(kinnita2,tyhista2);
+
         toidukast.getChildren().addAll(nimetus,nimetuseSisestus,kogus,koguseSisestus,kaloreid,kaloeridSisestus);
 
 
@@ -157,11 +168,12 @@ public class Peaklass extends Application {
 
 
 
-
+        //Peaaknasse teiste komponentide lisamine.
         borderPane.setTop(vbox);
         borderPane.setLeft(vasempool);
         borderPane.setCenter(keskel);
         borderPane.setRight(toidukast);
+        borderPane.setBottom(nupud2);
 
 
 
