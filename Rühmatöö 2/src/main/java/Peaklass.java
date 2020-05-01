@@ -349,6 +349,16 @@ public class Peaklass extends Application {
 
 
     public void loeFaili(ArrayList<String> sisestatud) throws IOException{
+        try(DataOutputStream br = new DataOutputStream(new FileOutputStream("andmed.dat"));
+        BufferedWriter andmed = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("andmed.txt")))){
+            br.writeInt(sisestatud.size());
+            for(String lause: sisestatud){
+                andmed.write(lause);
+                br.writeUTF(lause);
+            }
+        }
+
+
 
 
     }
@@ -375,6 +385,7 @@ public class Peaklass extends Application {
         }
         return lause;
     }
+
 
 
 
