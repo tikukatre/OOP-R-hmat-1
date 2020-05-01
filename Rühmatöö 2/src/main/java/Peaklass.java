@@ -3,6 +3,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -102,6 +103,7 @@ public class Peaklass extends Application {
         Aktiivsus.setPadding(new Insets(5));
         Aktiivsus.setAlignment(Pos.TOP_LEFT);
         RadioButton esimene = new RadioButton("1");
+
         esimene.setToggleGroup(aktiivsusGrupp);
         RadioButton teine = new RadioButton("2");
         teine.setToggleGroup(aktiivsusGrupp);
@@ -151,8 +153,8 @@ public class Peaklass extends Application {
         nimetuseSisestus.setMaxWidth(100);
         TextField koguseSisestus=new TextField();
         koguseSisestus.setMaxWidth(40);
-        TextField kaloeridSisestus=new TextField();
-        kaloeridSisestus.setMaxWidth(40);
+        TextField kaloreidSisestus=new TextField();
+        kaloreidSisestus.setMaxWidth(40);
 
         HBox nupud2 = new HBox();
         nupud2.setSpacing(20);
@@ -162,7 +164,7 @@ public class Peaklass extends Application {
         Button tyhista2 = new Button("Tühista");
         nupud2.getChildren().addAll(kinnita2,tyhista2);
 
-        toidukast.getChildren().addAll(nimetus,nimetuseSisestus,kogus,koguseSisestus,kaloreid,kaloeridSisestus,nupud2);
+        toidukast.getChildren().addAll(nimetus,nimetuseSisestus,kogus,koguseSisestus,kaloreid,kaloreidSisestus,nupud2);
 
 
 
@@ -182,41 +184,74 @@ public class Peaklass extends Application {
 
 
         //Sündmused
-        //Soovaliku vastuse kontrolliminepeale kinnitamist
+        //Isiku loomine peale kinnitamise nupu vajutamist
         kinnita.setOnAction(e->
         {
-
+            int aktiivsuseValik=0;
+            if (esimene.isSelected())
+                aktiivsuseValik=1;
+            else if(teine.isSelected())
+                aktiivsuseValik=2;
+            else if(kolmas.isSelected())
+                aktiivsuseValik=3;
+            else if(neljas.isSelected())
+                aktiivsuseValik=4;
             //Praegu võtab aktiivsuse argumendiks ühe!!!
 
             if(mees.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
                 //System.out.println("Mees"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
-                Isik isend= new Mees(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),1);
+                Isik isend= new Mees(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),aktiivsuseValik);
+
                 naitaInfot(info,isend);
+                System.out.println(aktiivsusGrupp.getSelectedToggle().getProperties().values().toString());
 
             }else if(naine.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
                 //System.out.println("Naine"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
-                Isik isend = new Naine(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),1);
+                Isik isend = new Naine(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),aktiivsuseValik);
                 naitaInfot(info,isend);
             }
 
         });
+        //Toidu loomine peale toidu kinnitamise nupu vajutamist
+        kinnita2.setOnAction(e->{
+            if(nimetuseSisestus.getText()!=null&&koguseSisestus.getText()!=null&&kaloreidSisestus.getText()!=null){
+                naitaToiduInfot(toiduinfo,new Toit(nimetuseSisestus.getText(),Double.parseDouble(koguseSisestus.getText()),Integer.parseInt(kaloreidSisestus.getText())));
+            }
+        });
+
+
+        kaloreidSisestus.setOnKeyPressed(e->{
+            if (e.getCode().equals(KeyCode.ENTER))
+            {
+                if(nimetuseSisestus.getText()!=null&&koguseSisestus.getText()!=null&&kaloreidSisestus.getText()!=null){
+                    naitaToiduInfot(toiduinfo,new Toit(nimetuseSisestus.getText(),Double.parseDouble(koguseSisestus.getText()),Integer.parseInt(kaloreidSisestus.getText())));
+                }
+
+            }
+        });
+
+
+
+
         //Tühistab väljad, kui kustuta nuppu on vajutatud.
         tyhista.setOnAction(e->{
-            mees.setSelected(false);
-            naine.setSelected(false);
+            sooGrupp.getSelectedToggle().setSelected(false);
             nimeSisestus.clear();
             vanuseSisestus.clear();
             pikkuseSisestus.clear();
             kehakaaluSisestus.clear();
             info.setText("");
+            aktiivsusGrupp.getSelectedToggle().setSelected(false);
 
         });
-
-        kinnita2.setOnAction(e->{
-            if(nimetuseSisestus.getText()!=null&&koguseSisestus.getText()!=null&&kaloeridSisestus.getText()!=null){
-                naitaToiduInfot(toiduinfo,new Toit(nimeSisestus.getText(),Double.parseDouble(koguseSisestus.getText()),Integer.parseInt(kaloeridSisestus.getText())));
-            }
+        //Tühistab kõik toiduväljad.
+        tyhista2.setOnAction(e->{
+            nimetuseSisestus.clear();
+            koguseSisestus.clear();
+            kaloreidSisestus.clear();
         });
+
+
 
 
         return borderPane;
