@@ -57,7 +57,7 @@ public class Peaklass extends Application {
         //Ülemineriba ehk nö tööriistariba.
         Hyperlink githubiLink = new Hyperlink("GitHub");
         Button vaata = new Button("Vaata andmeid");
-        Button salvesta = new Button("Salvsta andmed");
+        Button salvesta = new Button("Salvesta andmed");
         Button juhend = new Button("Juhend");
         ToolBar ylemineriba = new ToolBar(new Separator(),
                vaata, new Separator(), salvesta,new Separator(),

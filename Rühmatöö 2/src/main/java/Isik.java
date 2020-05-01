@@ -108,9 +108,11 @@ public abstract class Isik {
         return soovitus;
     }
 
+
     public Map<Double,String> kaloritekulu(){
-        Map<Double,String> tulemus = new HashMap<>();
         //Kaloritekulu arvutamine soovitatud tegevuse kohta
+        //Luuakse kujund Map<Double,String> , kus võtmeks saab kaloritekulu arv ja väärtuseks tekst, mis soovitab tegevust ja annab informatsiooni selle kohta.
+        Map<Double,String> tulemus = new HashMap<>();
 
         int suvalisedMinutid = (int)(Math.random()*61); //Genereerib suvaliselt minutite arvu 0-st kuni 1 tunnini, kui palju tegevust võiks teha.
         String[] tegevus = tegevuseSuvalineSoovitus().split(","); //Jaotab tegevuse kaheks: tegevuse nimetus ja tegevuse MET väärtus
