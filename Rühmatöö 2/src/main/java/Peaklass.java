@@ -231,6 +231,7 @@ public class Peaklass extends Application {
                     Isik isend= new Mees(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),aktiivsuseValik);
 
                     naitaInfot(info,isend);
+                    System.out.println(info.getText());
                     System.out.println(aktiivsusGrupp.getSelectedToggle().getProperties().values().toString());
 
                 }else if(naine.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
