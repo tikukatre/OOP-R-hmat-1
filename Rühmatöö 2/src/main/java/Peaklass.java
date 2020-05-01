@@ -337,7 +337,18 @@ public class Peaklass extends Application {
             "Parempoolne plokk arvutab välja kui palju oli Teie tarbitud toidus kaloried.");
 
     public void loeFaili(ArrayList<String> sisestatud) throws IOException{
+        try(DataOutputStream br = new DataOutputStream(new FileOutputStream("andmed.dat"));
+        BufferedWriter andmed = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("andmed.txt")))){
+            br.writeInt(sisestatud.size());
+            for(String lause: sisestatud){
+                andmed.write(lause);
+                br.writeUTF(lause);
+            }
+        }
+
+
 
     }
+
 
 }
