@@ -10,7 +10,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+import java.io.*;
 import java.util.Map;
+
+import static java.lang.System.in;
 
 public class Peaklass extends Application {
 
@@ -33,6 +36,7 @@ public class Peaklass extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
 
     @Override
     public void start(Stage stage) {
@@ -144,6 +148,24 @@ public class Peaklass extends Application {
         borderPane.setCenter(keskel);
         borderPane.setRight(toidukast);
 
+        Label aktiivsus = new Label("Aktiivsus");
+        ToggleGroup aktiivsusGrupp = new ToggleGroup();
+
+        HBox Aktiivsus = new HBox();
+        Aktiivsus.setSpacing(25);
+        Aktiivsus.setPadding(new Insets(5));
+        Aktiivsus.setAlignment(Pos.TOP_LEFT);
+        RadioButton esimene = new RadioButton("1");
+        esimene.setToggleGroup(aktiivsusGrupp);
+        RadioButton teine = new RadioButton("2");
+        teine.setToggleGroup(aktiivsusGrupp);
+        RadioButton kolmas = new RadioButton("3");
+        kolmas.setToggleGroup(aktiivsusGrupp);
+        RadioButton neljas = new RadioButton("4");
+        neljas.setToggleGroup(aktiivsusGrupp);
+        Aktiivsus.getChildren().addAll(esimene,teine,kolmas,neljas);
+
+
         //Sündmused
         //Soovaliku vastuse kontrolliminepeale kinnitamist
         kinnita.setOnAction(e->
@@ -190,6 +212,18 @@ public class Peaklass extends Application {
         info.setText(isik.toString() +isik.soovitus()+"\n"+tegevusekulu.get(voti));
 
     }
+
+    private static void salvesta() throws IOException {
+        try (DataOutputStream tekst = new DataOutputStream(new FileOutputStream("andmed.dat"))){}
+    }
+
+    private static void failiKirjutamine() throws IOException {
+        try (BufferedReader kasutajaSisend = new BufferedReader(new InputStreamReader(System.in))){
+
+
+        }
+    }
+
 
 
 }
