@@ -13,8 +13,6 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.util.Map;
 
-import static java.lang.System.in;
-
 public class Peaklass extends Application {
 
     public static String tegevusKulutabToidu(Map<Double,String> tegevuseKulu, double  toidukaloreid ){
@@ -95,6 +93,23 @@ public class Peaklass extends Application {
         TextField kehakaaluSisestus=new TextField();
         kehakaaluSisestus.setMaxWidth(40);
 
+        //Aktiivsuse valiku kast
+        Label aktiivsus = new Label("Aktiivsus");
+        ToggleGroup aktiivsusGrupp = new ToggleGroup();
+
+        HBox Aktiivsus = new HBox();
+        Aktiivsus.setSpacing(25);
+        Aktiivsus.setPadding(new Insets(5));
+        Aktiivsus.setAlignment(Pos.TOP_LEFT);
+        RadioButton esimene = new RadioButton("1");
+        esimene.setToggleGroup(aktiivsusGrupp);
+        RadioButton teine = new RadioButton("2");
+        teine.setToggleGroup(aktiivsusGrupp);
+        RadioButton kolmas = new RadioButton("3");
+        kolmas.setToggleGroup(aktiivsusGrupp);
+        RadioButton neljas = new RadioButton("4");
+        neljas.setToggleGroup(aktiivsusGrupp);
+        Aktiivsus.getChildren().addAll(aktiivsus,esimene,teine,kolmas,neljas);
 
         HBox nupud = new HBox();
         nupud.setSpacing(50);
@@ -105,7 +120,7 @@ public class Peaklass extends Application {
         nupud.getChildren().addAll(kinnita,tyhista);
         //väljade lisamine keskel olevasse kasti
         keskel.getChildren().addAll(sugu, soovalik, nimi,nimeSisestus,vanus,
-                vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,nupud);
+                vanuseSisestus,pikkus,pikkuseSisestus,kehakaal,kehakaaluSisestus,Aktiivsus,nupud);
 
 
         StackPane vasempool = new StackPane();
@@ -148,22 +163,7 @@ public class Peaklass extends Application {
         borderPane.setCenter(keskel);
         borderPane.setRight(toidukast);
 
-        Label aktiivsus = new Label("Aktiivsus");
-        ToggleGroup aktiivsusGrupp = new ToggleGroup();
 
-        HBox Aktiivsus = new HBox();
-        Aktiivsus.setSpacing(25);
-        Aktiivsus.setPadding(new Insets(5));
-        Aktiivsus.setAlignment(Pos.TOP_LEFT);
-        RadioButton esimene = new RadioButton("1");
-        esimene.setToggleGroup(aktiivsusGrupp);
-        RadioButton teine = new RadioButton("2");
-        teine.setToggleGroup(aktiivsusGrupp);
-        RadioButton kolmas = new RadioButton("3");
-        kolmas.setToggleGroup(aktiivsusGrupp);
-        RadioButton neljas = new RadioButton("4");
-        neljas.setToggleGroup(aktiivsusGrupp);
-        Aktiivsus.getChildren().addAll(esimene,teine,kolmas,neljas);
 
 
         //Sündmused
