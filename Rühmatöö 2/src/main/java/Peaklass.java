@@ -15,7 +15,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.awt.*;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Map;
@@ -237,10 +237,6 @@ public class Peaklass extends Application {
                 if(mees.isSelected()&&nimeSisestus.getText()!=null && vanuseSisestus.getText()!=null&&pikkuseSisestus.getText()!=null&&kehakaaluSisestus.getText()!=null){
                     //System.out.println("Mees"+nimeSisestus.getText()+vanuseSisestus.getText()+pikkuseSisestus.getText()+kehakaaluSisestus.getText());
                     Isik isend= new Mees(nimeSisestus.getText(),Integer.parseInt(vanuseSisestus.getText()),Double.parseDouble(pikkuseSisestus.getText()),Double.parseDouble(kehakaaluSisestus.getText()),aktiivsuseValik);
-                        naitaInfot(info,isend);
-                        System.out.println(info.getText());
-                        System.out.println(aktiivsusGrupp.getSelectedToggle().getProperties().values().toString());
-
                     naitaInfot(info,isend);
                     sisestatud.add(info.getText());
 
@@ -283,6 +279,21 @@ public class Peaklass extends Application {
         });
 
         juhend.setOnAction(e->uusAken("Juhend", Juhend));
+        salvesta.setOnAction(e-> {
+            try {
+                kirjutaFaili(sisestatud);
+            } catch (IOException ex) {
+                uusAken("Salvestamine","Failidesse ei õnnestunud salvestada");
+            }
+        });
+
+        vaata.setOnAction(e-> {
+            try {
+                uusAken("Failist loetud",andmedTekstina(loeFailist()));
+            } catch (IOException ex) {
+                uusAken("Salvestamine","Failist lugemine ei õnnestunud");
+            }
+        });
 
 
 
@@ -348,20 +359,30 @@ public class Peaklass extends Application {
 
 
 
-    public void loeFaili(ArrayList<String> sisestatud) throws IOException{
+    public void kirjutaFaili(ArrayList<String> sisestatud) throws IOException{
+       sisestatud.addAll(loeFailist());
         try(DataOutputStream br = new DataOutputStream(new FileOutputStream("andmed.dat"));
-        BufferedWriter andmed = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("andmed.txt")))){
+            BufferedWriter andmed = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("andmed.txt")))){
             br.writeInt(sisestatud.size());
             for(String lause: sisestatud){
                 andmed.write(lause);
                 br.writeUTF(lause);
             }
         }
-
-
-
-
     }
+
+    public ArrayList<String> loeFailist() throws IOException {
+        ArrayList<String> andmed = new ArrayList<>();
+        try(DataInputStream voog = new DataInputStream(new FileInputStream("andmed.dat"))){
+             int ridu = voog.readInt();
+            for (int i = 0; i <ridu ; i++) {
+                andmed.add(voog.readUTF());
+            }
+        }
+        return andmed;
+    }
+
+
 
 
 
@@ -384,6 +405,13 @@ public class Peaklass extends Application {
             lause="Tegevus kulutab vähem kaloreid, kui toidust saad.";
         }
         return lause;
+    }
+    String andmedTekstina(ArrayList<String> list){
+        String andmed="";
+        for(String lause:list){
+            andmed+=lause;
+        }
+        return andmed;
     }
 
 

@@ -1,0 +1,9 @@
+Nimi: Kaup
+Vanus: 23
+Pikkus: 1.89
+Kehakaal: 67.0
+Aktiivus: 2
+Päevane energiavajadus: 3524.8
+Oled normaalkaalus.
+Korrasta voodi ja vaheta linad: 2 minutit
+Kulutab: 2 kalorit.

@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/build/classes/java/main/ValeSisendErind.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/andmed.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Rühmatöö 2/andmed.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/build/classes/java/main/Peaklass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/build/classes/java/main/Peaklass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/build/classes/java/main/ValeSisendErind.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/build/classes/java/main/ValeSisendErind.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Rühmatöö 2/src/main/java/Peaklass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Rühmatöö 2/src/main/java/Peaklass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
