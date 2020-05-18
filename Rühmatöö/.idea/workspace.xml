@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="" />
+    <list default="true" id="269824fd-578b-4bce-9d45-3a496ac3c7c0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,6 +89,7 @@
       <workItem from="1588187097797" duration="2371000" />
       <workItem from="1588277183377" duration="1814000" />
       <workItem from="1588347253915" duration="968000" />
+      <workItem from="1588635895099" duration="161000" />
     </task>
     <task id="LOCAL-00001" summary="Esimesed väljad">
       <created>1585594945481</created>
@@ -200,10 +203,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="368" y="92" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585833792206" />
-    <state x="1082" y="262" key="FileChooserDialogImpl" timestamp="1588187658884">
+    <state x="1082" y="262" key="FileChooserDialogImpl" timestamp="1588636050169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1082" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588187658884" />
+    <state x="1082" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588636050169" />
     <state width="916" height="266" key="GridCell.Tab.0.bottom" timestamp="1588285555776">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -245,9 +248,9 @@
     </state>
     <state x="787" y="186" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1585828992071" />
     <state x="1249" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585833715853" />
-    <state x="868" y="187" width="969" height="757" key="new project wizard" timestamp="1588187723255">
+    <state x="868" y="187" width="969" height="757" key="new project wizard" timestamp="1588636051980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="868" y="187" width="969" height="757" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1588187723255" />
+    <state x="868" y="187" width="969" height="757" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1588636051980" />
   </component>
 </project>

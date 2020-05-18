@@ -1,0 +1,31 @@
+Nimi: Peeter
+Vanus: 34
+Pikkus: 1.99
+Kehakaal: 123.0
+Aktiivus: 2
+Päevane energiavajadus: 4996.35
+Tee trenni või tarbi vähem toitu,
+sest oled üsna ülekaalus.
+Kõnni toas tasa ringi: 55 minutit
+Kulutab: 67 kalorit.
+
+Nimi: Mari
+Vanus: 23
+Pikkus: 1.98
+Kehakaal: 89.0
+Aktiivus: 3
+Päevane energiavajadus: 5443.17
+Oled normaalkaalus.
+Tee mõõdukalt kätekõverdusi: 19 minutit
+Kulutab: 32 kalorit.
+
+Nimi: Len
+Vanus: 18
+Pikkus: 1.78
+Kehakaal: 78.0
+Aktiivus: 0
+Päevane energiavajadus: 0.0
+Oled normaalkaalus.
+Tee kääri hüppeid: 32 minutit
+Kulutab: 99 kalorit.
+
