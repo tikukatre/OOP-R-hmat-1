@@ -372,8 +372,6 @@ public class Peaklass extends Application {
                     new File("andmed.dat").delete();
                 }
 
-            } catch (FileNotFoundException e){
-
             } finally {
                 br.writeInt(sisestatud.size());
                 for (String lause : sisestatud) {
