@@ -33,7 +33,7 @@ public class Peaklass extends Application {
     public void start(Stage stage) throws ValeSisendErind {
         Scene stseen = new Scene(looPaigutus(), 800, 500);
 
-        stage.setTitle("OOP Rühmatöö 2");
+        stage.setTitle("QUARANTINE SLIMMER");
         stage.setScene(stseen);
         stage.show();
     }
