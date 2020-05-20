@@ -32,6 +32,7 @@ public class Peaklass extends Application {
     @Override
     public void start(Stage stage) throws ValeSisendErind {
         Scene stseen = new Scene(looPaigutus(), 800, 500);
+
         stage.setTitle("OOP Rühmatöö 2");
         stage.setScene(stseen);
         stage.show();
@@ -42,7 +43,7 @@ public class Peaklass extends Application {
     public BorderPane looPaigutus() throws ValeSisendErind {
         //Peaaken.
         BorderPane borderPane = new BorderPane();
-
+        borderPane.setStyle("-fx-background-color:#c0fad9;");
         //Ülemineriba ehk nö tööriistariba.
         Hyperlink githubiLink = new Hyperlink("GitHub");
         Button vaata = new Button("Vaata andmeid");
@@ -274,18 +275,19 @@ public class Peaklass extends Application {
             }
         });
 
-        juhend.setOnAction(e -> uusAken("Juhend", Juhend));
+        juhend.setOnAction(e -> uusAkenJuhend("Juhend", Juhend));
         salvesta.setOnAction(e -> {
             try {
                 kirjutaFaili(sisestatud);
             } catch (IOException ex) {
+                uusAken("Faili salvestamine", "Faili salvestamine ei õnnestunud.");
             }
 
         });
 
         vaata.setOnAction(e -> {
             try {
-                uusAken("Failist loetud", andmedTekstina(loeFailist()));
+                uusAkenKeritav("Failist loetud", andmedTekstina(loeFailist()));
             } catch (IOException ex) {
                 uusAken("Faiist lugemine", "Failist lugemine ei õnnestunud");
             }
@@ -320,25 +322,70 @@ public class Peaklass extends Application {
     }
 
 
+
     //Loob uue akna, mis ei lase edasi toimetada, kuni see on kinni pandud.
     //Abiks oli : https://youtu.be/SpL3EToqaXA ;
-    static void uusAken(String pealkiri, String sõnum) {
+    static void uusAken(String pealkiri, String sõnum){
         Stage aken = new Stage();
         aken.initModality(Modality.APPLICATION_MODAL);
         aken.setTitle(pealkiri);
-        aken.setWidth(500);
+        aken.setWidth(300);
+        Label tekst = new Label(sõnum);
+        tekst.setStyle("-fx-background-color:#aef5cd;");
+        Button sulge = new Button("Sulge");
+        sulge.setOnAction(e->aken.close());
+        VBox paigutus = new VBox();
+        paigutus.setPadding(new Insets(10));
+        paigutus.setSpacing(10);
+        paigutus.getChildren().addAll(tekst,sulge);
+        paigutus.setAlignment(Pos.CENTER);
+        paigutus.setStyle("-fx-background-color:#c0fad9;");
+        Scene stseen = new Scene(paigutus,400,300);
+        aken.setScene(stseen);
+        aken.showAndWait();
+
+    }
+
+    static void uusAkenKeritav(String pealkiri, String sõnum) {
+        Stage aken = new Stage();
+        aken.initModality(Modality.APPLICATION_MODAL);
+        aken.setTitle(pealkiri);
+        aken.setWidth(600);
 
         Label tekst = new Label(sõnum);
         Button sulge = new Button("Sulge");
         sulge.setOnAction(e -> aken.close());
         VBox paigutus = new VBox();
+        paigutus.setStyle("-fx-background-color:#c0fad9;");
         ScrollPane keritavAken = new ScrollPane();
         keritavAken.setContent(tekst);
+        keritavAken.setStyle("-fx-background-color:#c0fad9;");
         paigutus.setPadding(new Insets(10));
         paigutus.setSpacing(10);
         paigutus.getChildren().addAll(keritavAken, sulge);
         paigutus.setAlignment(Pos.CENTER);
-        Scene stseen = new Scene(paigutus, 400, 300);
+        Scene stseen = new Scene(paigutus, 600, 300);
+        aken.setScene(stseen);
+        aken.showAndWait();
+
+    }
+    static void uusAkenJuhend(String pealkiri, String sõnum){
+        Stage aken = new Stage();
+        aken.initModality(Modality.APPLICATION_MODAL);
+        aken.setTitle(pealkiri);
+        aken.setWidth(700);
+
+        Label tekst = new Label(sõnum);
+        tekst.setStyle("-fx-background-color:#aef5cd;");
+        Button sulge = new Button("Sulge");
+        sulge.setOnAction(e->aken.close());
+        VBox paigutus = new VBox();
+        paigutus.setPadding(new Insets(10));
+        paigutus.setSpacing(10);
+        paigutus.getChildren().addAll(tekst,sulge);
+        paigutus.setAlignment(Pos.CENTER);
+        paigutus.setStyle("-fx-background-color:#c0fad9;");
+        Scene stseen = new Scene(paigutus,400,300);
         aken.setScene(stseen);
         aken.showAndWait();
 
